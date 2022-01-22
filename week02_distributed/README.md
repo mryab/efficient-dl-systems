@@ -7,7 +7,7 @@ This week's menu:
 * Alternative seminar: python multiprocessing - [playlist](https://www.youtube.com/watch?v=RR4SoktDQAw&list=PL5tcWHG-UPH3SX16DI6EP1FlEibgxkg_6)
 
 
-Practice: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mryab/efficient-dl-systems/main/week02_distributed/practice.ipynb)
+Practice: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mryab/efficient-dl-systems/blob/main/week02_distributed/practice.ipynb)
  
 __Note:__ while you *can* do the entire thing in colab, we recommend using a node with at least 4 cpus to better "feel" the difference :)
 
