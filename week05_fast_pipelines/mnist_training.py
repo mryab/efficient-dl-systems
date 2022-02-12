@@ -2,12 +2,54 @@ import argparse
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import torchvision
 from tqdm.auto import trange, tqdm
 
 
 def train(
+        model: nn.Module,
+        train_dataloader: torch.utils.data.DataLoader,
+        val_dataloader: torch.utils.data.DataLoader,
+        n_epochs: int = 3,
+        device: torch.device = "cuda:0",
+) -> None:
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+    loss_fn = nn.CrossEntropyLoss()
+    model.to(device)
+
+    for epoch in range(n_epochs):
+        model.train()
+        for x_train, y_train in tqdm(train_dataloader, desc=f"Epoch {epoch}: "):
+            x_train, y_train = x_train.to(device), y_train.to(device)
+            y_pred = model(x_train)
+
+            loss = loss_fn(y_pred, y_train)
+            loss.backward()
+            optimizer.step()
+            optimizer.zero_grad()
+
+        if epoch % 2 == 0 or epoch == n_epochs - 1:
+            print("Starting validation...")
+            model.eval()
+            val_loss = torch.empty(len(val_dataloader))
+            val_accuracy = torch.empty(len(val_dataloader))
+
+            with torch.no_grad():
+                for i, (x_val, y_val) in enumerate(val_dataloader):
+                    x_val, y_val = x_val.to(device), y_val.to(device)
+                    y_pred = model(x_val)
+                    loss = loss_fn(y_pred, y_val)
+                    val_loss[i] = loss
+                    val_accuracy[i] = (torch.argmax(y_pred, dim=-1) == y_val).float().mean()
+
+            print(
+                f"Epoch: {epoch}, loss: {val_loss.mean().detach().cpu()}, "
+                f"accuracy: {val_accuracy.mean().detach().cpu()}"
+            )
+    model.eval()
+
+
+def train_amp(
         model: nn.Module,
         train_dataloader: torch.utils.data.DataLoader,
         val_dataloader: torch.utils.data.DataLoader,
@@ -174,11 +216,16 @@ def get_model(model_level: int = 1) -> nn.Module:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-level", type=int, default=1)
-    parser.add_argument("--transforms-level", type=int, default=1)
+    parser.add_argument("-m", "--model-level", type=int, default=1)
+    parser.add_argument("-t", "--transforms-level", type=int, default=1)
+    parser.add_argument("--amp", action="store_true", default=False)
+    parser.add_argument("--n-epochs", type=int, default=100)
     args = parser.parse_args()
 
-    train_dataloader, val_dataloader = get_loaders(args.transforms_level)
-    model = get_model(args.model_level)
-    train(model, train_dataloader, val_dataloader, n_epochs=100)
+    train_dataloader_, val_dataloader_ = get_loaders(args.transforms_level)
+    model_ = get_model(args.model_level)
+    if args.amp:
+        train_amp(model_, train_dataloader_, val_dataloader_, n_epochs=args.n_epochs)
+    else:
+        train(model_, train_dataloader_, val_dataloader_, n_epochs=args.n_epochs)
 
