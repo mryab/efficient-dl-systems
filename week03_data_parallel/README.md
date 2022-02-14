@@ -1,5 +1,6 @@
 # Week 3: Data-parallel training
 
+* Slides: [pdf](https://disk.yandex.ru/i/a9P_Ub9Q-Aj5AQ), [source](https://disk.yandex.ru/i/9mafw1A4kL2VJA)
 * Lecture: TBA
 * Seminar: [link](./seminar.ipynb)
 * Homework: see the [homework](./homework) folder
