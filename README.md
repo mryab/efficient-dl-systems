@@ -11,7 +11,9 @@ This repository contains materials for the Efficient Deep Learning Systems cours
 - [__Week 3:__](./week03_data_parallel) __Data-parallel training and All-Reduce__
   - Lecture: Data-parallel training of neural networks. All-Reduce and its efficient implementations.
   - Seminar: Introduction to PyTorch Distributed. Data-parallel training primitives.
-- __Week 4:__ Memory-efficient and model-parallel training
+- [__Week 4:__](./week04_large_models) __Memory-efficient and model-parallel training__
+  - Lecture: Model-parallel training, gradient checkpointing, offloading
+  - Seminar: Gradient checkpointing in practice
 - __Week 5:__ Profiling DL code, training-time optimizations
 - __Week 6:__ Basics of Python application deployment
 - __Week 7:__ Software for serving neural networks
