@@ -19,6 +19,7 @@ def train(
 
     for epoch in range(n_epochs):
         model.train()
+        i = 0
         for x_train, y_train in tqdm(train_dataloader, desc=f"Epoch {epoch}: "):
             x_train, y_train = x_train.to(device), y_train.to(device)
             y_pred = model(x_train)
@@ -27,6 +28,9 @@ def train(
             loss.backward()
             optimizer.step()
             optimizer.zero_grad()
+            i += 1
+            if i == 10 and n_epochs == 1:
+                break
 
         if epoch % 2 == 0 or epoch == n_epochs - 1:
             print("Starting validation...")
