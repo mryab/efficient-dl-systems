@@ -14,4 +14,5 @@ Implement and compare different batching approaches for a language modelling tas
 ## Task 3 (20% points)
 Give a detailed report on Transformer profiling.
 
+___
 You will find detailed instructions in the `task.ipynb` file.
