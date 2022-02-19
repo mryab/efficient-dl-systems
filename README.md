@@ -14,7 +14,7 @@ This repository contains materials for the Efficient Deep Learning Systems cours
 - [__Week 4:__](./week04_large_models) __Memory-efficient and model-parallel training__
   - Lecture: Model-parallel training, gradient checkpointing, offloading
   - Seminar: Gradient checkpointing in practice
-- [__Week 5:__] Training optimizations, profiling DL code
+- [__Week 5:__](./week05_fast_pipelines) __Training optimizations, profiling DL code__
   - Lecture: Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads  
   - Seminar: Automatic Mixed Precision in PyTorch. Dynamic padding for sequence data and JPEG decoding benchmarks. Basics of PyTorch Profiler and cProfile.
 - __Week 6:__ Basics of Python application deployment
