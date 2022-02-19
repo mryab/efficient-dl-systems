@@ -27,3 +27,4 @@
 * [torch.utils.bottleneck quick guide](https://pytorch.org/docs/stable/bottleneck.html)
 * [PyTorch Autograd profiler tutorial](https://pytorch.org/tutorials/beginner/profiler.html)
 * [Nsight Systems](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) and [Nsight Compute](https://docs.nvidia.com/nsight-compute/2022.1/index.html) user guides
+* [Video tutorial about speeding up and profiling neural networks](https://www.youtube.com/watch?v=ySGIaOb_RDY)
