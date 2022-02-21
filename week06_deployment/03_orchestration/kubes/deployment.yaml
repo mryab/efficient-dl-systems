@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vgg16-inference
+  labels:
+    service-name: vgg16-inference-api
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      service-name: vgg16-inference-api
+  template:
+    metadata:
+      labels:
+        service-name: vgg16-inference-api
+        version: v1.0.0
+    spec:
+      containers:
+        - name: vgg16-inference-server
+          image: vgg16-inference-server:1.0.0
+          ports:
+            - containerPort: 80
