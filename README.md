@@ -18,7 +18,7 @@ This repository contains materials for the Efficient Deep Learning Systems cours
   - Lecture: Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads  
   - Seminar: Automatic Mixed Precision in PyTorch. Dynamic padding for sequence data and JPEG decoding benchmarks. Basics of PyTorch Profiler and cProfile.
 - [__Week 6:__](./week06_deployment) __Python web application deployment__
-  - Lecture/Seminar: Building and deployment of production-ready web service. App & web servers, docker containers, prometheus metrics, API via HTTP and gRPC.
+  - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker containers, Prometheus metrics, API via HTTP and gRPC.
 - __Week 7:__ Software for serving neural networks
 - __Week 8:__ Optimizing models for faster inference
 - __Week 9:__ Experiment tracking, model and data versioning
