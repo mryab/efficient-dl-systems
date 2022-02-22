@@ -56,7 +56,7 @@ app_http_inference_count_total 12.0
 ```
 
 **[3 points] GRPC endpoint**
-We also want a separate [gRPC](https://grpc.io/)  service on `9090` port. See proto files in `protos` directory. The contract is the same as for the HTTP endpoint.
+We also want a separate [gRPC](https://grpc.io/) service on `9090` port. See proto files in `protos` directory. The contract is the same as for the HTTP endpoint.
 
 ### How to submit?
 
