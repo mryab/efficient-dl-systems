@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile.production
+      context: .
+    ports:
+      - "8080:80"
