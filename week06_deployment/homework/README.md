@@ -56,17 +56,17 @@ app_http_inference_count_total 12.0
 ```
 
 **[3 points] GRPC endpoint**
-We also want a separate [gRPC](https://grpc.io/)  service on `9090` port. See proto files in `protos` directory. The contract is the same as for the HTTP endpoint.
+We also want a separate [gRPC](https://grpc.io/) service on `9090` port. See proto files in `protos` directory. The contract is the same as for the HTTP endpoint.
 
 ### How to submit?
 
 * Create private github repository
 * Add [edu-automation-bot](https://github.com/edu-automation-bot) to collaborators (all invitations will be accepted manually, so don't hesitate to notify @adkosm).
 * Put `Dockerfile` in the root of repository. This dockerfile should assemble all code in your repo into the working service.
-* Go to (jenkins.efficientdeeplearning.site)[http://jenkins.efficientdeeplearning.site] , use `student`/`student!` for login.
+* Go to [jenkins.efficientdeeplearning.site](http://jenkins.efficientdeeplearning.site) , use `student`/`student!` for login.
 * Build `week06-homework` pipeline with your repo as a parameter.
 * After successful build, click `Хранить эту сборку вечно`
-* This link to your successful (or maybe only partially successful) is the answer for this homework - send it via anytask.
+* This link to your successful (or maybe only partially successful) build is the answer for this homework - send it via anytask.
 
 ### Notes
 
