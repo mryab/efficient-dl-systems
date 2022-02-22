@@ -1,0 +1,14 @@
+FROM python:3.7
+
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY protos/* /app/protos
+COPY labels.json vgg16.pt /app/
+COPY *.py /app/
+RUN python3 run_codegen.py
+
+ENTRYPOINT ["python3", "inference-api.py"]
