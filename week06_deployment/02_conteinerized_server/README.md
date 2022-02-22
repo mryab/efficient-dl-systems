@@ -1,4 +1,4 @@
-# Conteinerized server
+# Containerized server
 
 Put `vgg16.pt` inside this directory
 
