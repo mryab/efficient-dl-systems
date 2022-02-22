@@ -66,7 +66,7 @@ We also want a separate [gRPC](https://grpc.io/)  service on `9090` port. See pr
 * Go to (jenkins.efficientdeeplearning.site)[http://jenkins.efficientdeeplearning.site] , use `student`/`student!` for login.
 * Build `week06-homework` pipeline with your repo as a parameter.
 * After successful build, click `Хранить эту сборку вечно`
-* This link to your successful (or maybe only partially successful) is the answer for this homework - send it via anytask.
+* This link to your successful (or maybe only partially successful) build is the answer for this homework - send it via anytask.
 
 ### Notes
 
