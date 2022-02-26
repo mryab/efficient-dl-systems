@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  triton:
+    image: nvcr.io/nvidia/tritonserver:22.01-py3
+    command: tritonserver --model-repository=/models
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    volumes:
+      - ./models-repo:/models
+
+  prom:
+    image: prom/prometheus:v2.27.1
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:7.5.7
+    ports:
+      - 3000:3000
+    volumes:
+      - ./datasources:/etc/grafana/provisioning/datasources
+      - ./config.ini:/etc/grafana/config.ini
