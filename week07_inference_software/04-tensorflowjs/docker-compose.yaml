@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  simple:
+    image: python:3.7
+    command: python3 -m http.server -d /data --bind 0.0.0.0 9090
+    ports:
+      - 9090:9090
+    volumes:
+      - ./sitedata_simple:/data
+
+  learning:
+    image: python:3.7
+    command: python3 -m http.server -d /data --bind 0.0.0.0 9090
+    ports:
+      - 9091:9090
+    volumes:
+      - ./sitedata_learning:/data
