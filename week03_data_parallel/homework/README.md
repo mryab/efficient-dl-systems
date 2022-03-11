@@ -34,7 +34,7 @@ the number of workers (use at least 1 and 4), the size of activations (128, 256,
 Compare the results of forward/backward passes with the FP32 inputs from a standard Gaussian distribution and 
 the loss function that simply sums the outputs over first N/2 samples (N is the total batch size): 
 a working implementation should have reasonably high `rtol` and `atol` (at least 1e-3).
-Finally, measure the CPU and GPU time (2+ workers) and the memory footprint of standard **SyncBatchNorm** 
+Finally, measure the GPU time (2+ workers) and the memory footprint of standard **SyncBatchNorm** 
 and your implementation in the same setup as above.
 
 
