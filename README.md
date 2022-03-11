@@ -19,7 +19,8 @@ This repository contains materials for the Efficient Deep Learning Systems cours
   - Seminar: Automatic Mixed Precision in PyTorch. Dynamic padding for sequence data and JPEG decoding benchmarks. Basics of PyTorch Profiler and cProfile.
 - [__Week 6:__](./week06_deployment) __Python web application deployment__
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker containers, Prometheus metrics, API via HTTP and gRPC.
-- __Week 7:__ Software for serving neural networks
+- [__Week 7:__](./week07_inference_software) __Software for serving neural networks__
+  - Lecture/Seminar: Different formats for packing NN: ONNX, TorchScript, IR. Inference servers: OpenVINO, Triton. ML on client devices: TfJS, ML Kit, Core ML.
 - __Week 8:__ Optimizing models for faster inference
 - __Week 9:__ Experiment tracking, model and data versioning
 - __Week 10:__ Testing, debugging and monitoring of models
