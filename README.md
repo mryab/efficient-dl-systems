@@ -21,7 +21,9 @@ This repository contains materials for the Efficient Deep Learning Systems cours
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker containers, Prometheus metrics, API via HTTP and gRPC.
 - [__Week 7:__](./week07_inference_software) __Software for serving neural networks__
   - Lecture/Seminar: Different formats for packing NN: ONNX, TorchScript, IR. Inference servers: OpenVINO, Triton. ML on client devices: TfJS, ML Kit, Core ML.
-- __Week 8:__ Optimizing models for faster inference
+- [__Week 8:__](./week08_compress_models) __Optimizing models for faster inference__
+  - Lecture: Knowlenge distillation, Pruning, Quantization, NAS, Efficient Architectures
+  - Seminar: Quantization and distillation of Transformers
 - __Week 9:__ Experiment tracking, model and data versioning
 - __Week 10:__ Testing, debugging and monitoring of models
 
