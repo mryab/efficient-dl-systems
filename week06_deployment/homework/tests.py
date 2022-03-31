@@ -36,9 +36,15 @@ def grpc_host(server_ip):
     return "{}:9090".format(server_ip)
 
 
+def get_metric_value(samples):
+    if len(samples) == 0:
+        return 0
+    return samples[0].value
+
+
 def parse_prom(metrics_data):
     return {
-        m.name: m.samples[0].value
+        m.name: get_metric_value(m.samples)
         for m in text_string_to_metric_families(metrics_data)
     }
 
