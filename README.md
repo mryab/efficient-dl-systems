@@ -1,5 +1,5 @@
 # Efficient Deep Learning Systems
-This repository contains materials for the Efficient Deep Learning Systems course taught at the Faculty of Computer Science of HSE University and Yandex School of Data Analysis.
+This repository contains materials for the Efficient Deep Learning Systems course taught at the [Faculty of Computer Science](https://cs.hse.ru/en/) of [HSE University](https://www.hse.ru/en/) and [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/).
 
 # Syllabus
 - [__Week 1:__](./week01_intro) __Introduction__
@@ -32,7 +32,7 @@ This repository contains materials for the Efficient Deep Learning Systems cours
   - Efficient Inference of Deep Learning Models on (GP)GPU. Ivan Komarov, Yandex
 
 ## Grading
-There will be a total of 4 home assignments (some of them spread over several weeks). 
+There will be a total of 3 home assignments (some of them spread over several weeks). 
 The final grade is a weighted sum of per-assignment grades. 
 Please refer to the course page of your institution for details.
 
