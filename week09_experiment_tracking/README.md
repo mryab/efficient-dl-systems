@@ -1,7 +1,7 @@
 # Week 9: Experiment tracking and testing
 
-* Lecture: [link](./lecture.pdf)
-* Seminar: see the [example_project](./example_project) directory 
+* Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/XRkyBMMiKta0fg) (in russian)
+* Seminar: see the [example_project](./example_project) directory and [video](https://disk.yandex.ru/i/IeYjpPF_vrZEDA)
 
 ## Further reading
 * Tools for experiment tracking: [Comet](https://www.comet.ml/site/), [Neptune](https://neptune.ai/), [Sacred](https://github.com/IDSIA/sacred), [Weights and Biases](https://wandb.ai/)

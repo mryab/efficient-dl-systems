@@ -1,7 +1,7 @@
 # Week 5: Training optimizations, profiling DL code
 
-* Lecture: [link](./lecture.pdf)
-* Seminar: [link](./practice.ipynb) 
+* Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/nMq995Nqzl1mDA)
+* Seminar: [notebook](./practice.ipynb), [video](https://disk.yandex.ru/i/8N1SmqD5J7xS5Q)
 * Homework: see the [homework](./homework) folder
 
 ## Further reading

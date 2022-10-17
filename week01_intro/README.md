@@ -1,7 +1,7 @@
 # Week 1: Introduction
 
-* Lecture: [HSE](./lecture_hse.pdf) and YSDA (to be added)
-* Seminar: [link](./seminar.ipynb)
+* Lecture: [slides](./lecture_hse.pdf) (en), [video](https://disk.yandex.ru/i/y7pEVuEIoLlTGg) (ru)
+* Seminar: [link](./seminar.ipynb) (en), [video](https://disk.yandex.ru/i/0QLtiSHzHkAxzg) (ru)
 
 ## Further reading
 * [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) and [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
