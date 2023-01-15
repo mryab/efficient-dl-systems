@@ -1,8 +1,8 @@
 
 This week's menu:
 * Slides: [pdf version](https://disk.yandex.ru/i/sn3j7dVvehkMdQ), [odp version](https://disk.yandex.ru/i/Lrgenf4Q_qOveQ)
-* Lecture: Basic parallelism & parameter servers (russian) - [here](https://disk.yandex.ru/i/iKjF7KyUvMsztQ)
-* Seminar: multiprocessing basics (russian) - [here](https://disk.yandex.ru/i/0Tth1vu8w47xdg)
+* Lecture: Basic parallelism & parameter servers (in Russian) - [here](https://disk.yandex.ru/i/iKjF7KyUvMsztQ)
+* Seminar: multiprocessing basics (in Russian) - [here](https://disk.yandex.ru/i/0Tth1vu8w47xdg)
 * Alternative lecture: Parameter servers from CMU 10-605 - [here](https://www.youtube.com/watch?v=N241lmq5mqk)
 * Alternative seminar: python multiprocessing - [playlist](https://www.youtube.com/watch?v=RR4SoktDQAw&list=PL5tcWHG-UPH3SX16DI6EP1FlEibgxkg_6)
 

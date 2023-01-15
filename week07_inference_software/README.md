@@ -1,8 +1,6 @@
 # Inference software
 
-Slides: [link](./slides.pdf)
-
-Video (russian): [link](https://disk.yandex.ru/i/lb9g2EcDlVJmtQ)
+* Slides: [link](./slides.pdf), video (in Russian): [link](https://disk.yandex.ru/i/lb9g2EcDlVJmtQ)
 
 Run `jupyter notebook` to open `.ipynb` files and execute `docker-compose up` to run stand.
 

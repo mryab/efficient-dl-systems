@@ -2,7 +2,7 @@
 
 See README files inside directories for more info about how to run stands.
 
-Lecture + practice video (in russian) - [link](https://disk.yandex.ru/i/8r1jkACpyMe2Mw)
+* Lecture + practice video (in Russian) - [link](https://disk.yandex.ru/i/8r1jkACpyMe2Mw)
 
 Homework: see the [homework](./homework) folder
 

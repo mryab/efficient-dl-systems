@@ -1,6 +1,6 @@
 # Week 9: Experiment tracking and testing
 
-* Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/XRkyBMMiKta0fg) (in russian)
+* Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/XRkyBMMiKta0fg) (in Russian)
 * Seminar: see the [example_project](./example_project) directory and [video](https://disk.yandex.ru/i/IeYjpPF_vrZEDA)
 
 ## Further reading
