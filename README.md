@@ -29,7 +29,7 @@ This repository contains materials for the Efficient Deep Learning Systems cours
   - Seminar: Example DVC+W&B project walkthrough. Intro to testing with pytest.
 - [__Week 10:__](./week10_invited_talks) __Invited talks__
   - [Memory Footprint Reduction Techniques for DNN Training: An Overview](./week10_invited_talks/memory_footprint_reduction.pdf). [Gennady Pekhimenko](http://www.cs.toronto.edu/~pekhimenko/), University of Toronto, Vector Institute
-  - Efficient Inference of Deep Learning Models on (GP)GPU. Ivan Komarov, Yandex
+  - [Efficient Inference of Deep Learning Models on (GP)GPU](https://disk.yandex.ru/i/Ro8NL38ZzJDC3w). Ivan Komarov, Yandex
 
 ## Grading
 There will be a total of 3 home assignments (some of them spread over several weeks). 
