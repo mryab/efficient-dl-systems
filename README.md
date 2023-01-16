@@ -1,6 +1,8 @@
 # Efficient Deep Learning Systems
 This repository contains materials for the Efficient Deep Learning Systems course taught at the [Faculty of Computer Science](https://cs.hse.ru/en/) of [HSE University](https://www.hse.ru/en/) and [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/).
 
+__This is an ongoing 2023 course, for previous version, see [2022 branch](https://github.com/mryab/efficient-dl-systems/tree/2022).__
+
 # Syllabus
 - __Week 1:__ __Introduction__
   - Lecture: Course overview and organizational details. Core concepts of the GPU architecture and CUDA API.
