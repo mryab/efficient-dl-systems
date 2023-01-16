@@ -2,7 +2,7 @@ Slides: [pdf](https://disk.yandex.ru/i/WL_7zqgeGx03Ug), [source](https://disk.ya
 
 Lecture (video) - https://disk.yandex.ru/i/8Fx5f4ewhGLeWA
 
-The practice notebook can be found in [`./homework.ipynb`](./homework.ipynb), [![img](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mryab/efficient-dl-systems/blob/main/week04_large_models/homework.ipynb)
+The practice notebook can be found in [`./homework.ipynb`](./homework.ipynb), [![img](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mryab/efficient-dl-systems/blob/2022/week04_large_models/homework.ipynb)
 
 References:
 * PyTorch gradient checkpointing - [API reference](https://pytorch.org/docs/stable/checkpoint.html)
