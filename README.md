@@ -4,7 +4,7 @@ This repository contains materials for the Efficient Deep Learning Systems cours
 __This branch corresponds to the ongoing 2023 course. If you want to see full materials of past years, see the ["Past versions"](#past-versions) section.__
 
 # Syllabus
-- __Week 1:__ __Introduction__
+- [__Week 1:__](./week01_intro) __Introduction__
   - Lecture: Course overview and organizational details. Core concepts of the GPU architecture and CUDA API.
   - Seminar: CUDA operations in PyTorch. Introduction to benchmarking.
 - __Week 2:__ __Experiment tracking, model and data versioning, testing DL code in Python__
