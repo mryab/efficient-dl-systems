@@ -10,6 +10,7 @@ repos:
     rev: 21.12b0
     hooks:
     -   id: black
+        args: [-l=120]
 -   repo: https://github.com/nbQA-dev/nbQA
     rev: 1.5.2
     hooks:
