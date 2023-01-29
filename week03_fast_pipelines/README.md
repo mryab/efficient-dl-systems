@@ -1,9 +1,5 @@
 # Week 3: Training optimizations, profiling DL code
 
-* Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/nMq995Nqzl1mDA)
-* Seminar: [notebook](seminar/practice.ipynb), [video](https://disk.yandex.ru/i/8N1SmqD5J7xS5Q)
-* Homework: see the [homework](./homework) folder
-
 ## Further reading
 * [Blog post about reduced precision FP formats](https://moocaholic.medium.com/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407)
 * NVIDIA blog posts about [mixed precision training with Tensor Cores](https://developer.nvidia.com/blog/video-mixed-precision-techniques-tensor-cores-deep-learning/), [Tensor Core performance tips](https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/), [TF32 Tensor Cores](https://developer.nvidia.com/blog/accelerating-ai-training-with-tf32-tensor-cores/)
