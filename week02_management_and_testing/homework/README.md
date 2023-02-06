@@ -5,32 +5,26 @@ tasks 3 and 4 (or both of them for bonus points).
 However, completing tasks 3 or 4 without the first two will not give you any points.
 
 # Problem statement
-You are given a small codebase that trains an **unconditional** [Denoising Diffusion Probabilistic Model](https://arxiv.org/abs/2006.11239)
+You are given a small codebase that apparently trains an **unconditional** [Denoising Diffusion Probabilistic Model](https://arxiv.org/abs/2006.11239)
 on the CIFAR-10 dataset.
-It achieves *somewhat* decent results after training for 100 epochs (~2 hours on an average GPU), but you should not 
-expect much in terms of quality.
-Instead, we are going to have a deeper look at the training pipeline and make it reliable and reproducible.
-
-When submitting this assignment, you should attach a .zip archive that contains:
-- The source code with all your fixes and improvements
-- A Markdown/PDF report in the root of the project folder that:
-  1. Details the changes you made to the original code (we will run `diff` and see if everything is explained)
-  2. Tells how to run the modified code (i.e., which command line arguments you have added and how to use them)
-  3. Describes your process of fixing and adding new tests for Task 1
-  4. Gives a link to the Weights and Biases project with all necessary logs for tasks 2 and 3
-- If you solved Tasks 3 or 4, please ensure that the archived project contains the corresponding configuration/lock files as well.
-- An updated `requirements.txt` file, if your solution requires new dependencies such as `wandb`, `hydra-core` or `dvc`.
+However, this project contains several bugs of different severity, and even some of the tests are written incorrectly.
+A correct implementation will achieve *somewhat* decent results after training for 100 epochs (~2 hours on an average GPU),
+but you should not expect much in terms of quality.
+In this homework, we are going to have a deeper look at the training pipeline, try to fix any errors we find and make 
+the code more reliable and reproducible.
 
 # Task 1 (6 points)
 Implement *correct* tests for the training pipeline.
 Specifically, have a look at the current [tests](./tests) folder: it contains several files with tests, 
 some of which fail, fail sometimes or are plainly incorrect.
-Your task is to identify such tests and make the test suite pass deterministically: this will involve changes both to `modeling`
-and to `tests`, as some parts of the testing code need to be modified or even removed.
+Your task is to identify such tests and make the test suite pass deterministically: this will involve changes 
+both to `modeling` and to `tests`, as some parts of the testing code need to be modified as well.
 
-In your report, please tell how you found the bugs in all parts of the code.
+In your report, please tell us how you found the bugs in all parts of the code.
 You can find the original implementation of DDPM that we use here, but giving this as an explanation for your fixes 
 will give you no points.
+Obviously, "solving" this assignment by removing all tests or having unreasonably high thresholds is not going to earn
+you a good grade as well.
 
 After that, implement the `test_training` function in `test_pipeline.py` that runs an integration test for the
 entire training procedure with different hyperparameters and expects different outcomes.
@@ -80,3 +74,14 @@ hashes of all dependencies in the pipeline.
 
 If you have also done the Hydra configuration assignment, make sure to check out [this guide](https://dvc.org/doc/user-guide/experiment-management/hydra-composition)
 on integrating Hydra with DVC experiment management.
+
+# Submission format
+When submitting this assignment, you should attach a .zip archive that contains:
+- The source code with all your fixes and improvements
+- A Markdown/PDF report in the root of the project folder that:
+  1. Details the changes you made to the original code (we will run `diff` and see if everything is explained)
+  2. Tells how to run the modified code (i.e., which command line arguments you have added and how to use them)
+  3. Describes your process of fixing and adding new tests for Task 1
+  4. Gives a link to the Weights and Biases project with all necessary logs for tasks 2 and 3
+- If you solved Tasks 3 or 4, please ensure that the archived project contains the corresponding configuration/lock files as well.
+- An updated `requirements.txt` file, if your solution requires new dependencies such as `wandb`, `hydra-core` or `dvc`.

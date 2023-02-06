@@ -23,6 +23,7 @@ def train_dataset():
 
 @pytest.mark.parametrize(["device"], [["cpu"], ["cuda"]])
 def test_train_on_one_batch(device, train_dataset):
+    # note: you should not need to increase the threshold or change the hyperparameters
     ddpm = DiffusionModel(
         eps_model=UnetModel(3, 3, hidden_size=32),
         betas=(1e-4, 0.02),
@@ -41,4 +42,5 @@ def test_train_on_one_batch(device, train_dataset):
 
 
 def test_training():
+    # note: implement and test a complete training procedure (including sampling)
     pass
