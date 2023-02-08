@@ -5,8 +5,10 @@ Implement your solutions in the folders for the corresponding sections. Create a
 the structure of your solution for each section, include benchmark results in the tables, provide explanations of the observed results.
 
 ## Submission format:
-- For the report you might create `.ipynb` file or `.md` file.
-- Create an archive with sections folders with implemented solutions AND with report file.
+- For the report you might create `.ipynb` file or `.pdf` file.
+- Create an archive that contains:
+  - Folder with each section with your solution
+  - Report file
 
 ## Task 1: DIY loss scaling (3 points)
 Implement loss scaling for AMP training mode.
@@ -38,11 +40,11 @@ You will observe that adding a scaler gives you additional accuracy points.
 ### Report instructions
 After you are done with a code, you can either:
 - Run training function with implemented scaling modes in `.ipynb` report
-- Include training logs AND instructions how to run your code in the `.md` report
+- Include training logs AND instructions how to run your code in the `.pdf` report
 
 ## Task 2: efficient batching for language modelling (4 points)
 
-In this part we suggest you examine the efficiency of the three batching approaches we discussed during the seminar. Let us remind you shortly:
+In this part you need to examine the efficiency of the three batching approaches we discussed during the seminar. Let us remind you shortly:
 
 **BRAIN**: pad everything to a fixed `max_length`
 
@@ -51,7 +53,7 @@ In this part we suggest you examine the efficiency of the three batching approac
 **ULTRA DUPER BIG BRAIN**: presort data to sample sequences smartly, preserving similar examples length in the batch
 
 ### Task
-More formally, we suggest you download [WikiText-103 dataset](https://www.salesforce.com/products/einstein/ai-research/the-wikitext-dependency-language-modeling-dataset/) and implement all the mentioned approaches.
+More formally, you need to download [WikiText-103 dataset](https://www.salesforce.com/products/einstein/ai-research/the-wikitext-dependency-language-modeling-dataset/) and implement all the mentioned approaches.
 Use only the training subset for all the task's sub-problems.
 
 - For naive batching, implement a Pytorch Dataset class that will parse training data from the source files of the dataset and pad every sample to a fixed `max_length=640`. **(0.5 points)**
@@ -59,13 +61,13 @@ Use only the training subset for all the task's sub-problems.
 More specifically, you need to pad sequences only up to a maximum sample length in the current batch. **(1 point)**
 - Finally, for the third approach, implement the following trick.
 While processing the dataset, split it into the several groups (bins) by sample length.
-We suggest you uniformly split the samples list sorted by sample length. Conduct experiments for 1, 5, 10, 25, 50 bins.
+you need to uniformly split the samples list sorted by sample length. Conduct experiments for 1, 5, 10, 25, 50 bins.
 While calling a `__getitem__` method, you firstly sample a bin number, then sample the needed examples number form the bin and pad them with collator from the second subtask. **(2.5 points)**
 
 In every sub-problem, for sequences longer than 640 tokens just truncate the overflowing part.
 
 For each of the implemented methods mock one training epoch and provide min, max, mean and median batch processing times.
-To mock a training epoch we suggest you construct a small GPT-2-like model: use `nn.Embedding` layer, `PositionalEncoding` class from `transformer.py` file and a single `nn.TransformerDecoder` layer with hidden size 1024 and 8 heads.
+To mock a training epoch you need to construct a small GPT-2-like model: use `nn.Embedding` layer, `PositionalEncoding` class from `transformer.py` file and a single `nn.TransformerDecoder` layer with hidden size 1024 and 8 heads.
 For tokenization use `torchtext.data.utils.get_tokenizer("basic_english")`.
 Run one epoch **without a backward pass**. Make sure you've [warmed up](https://forums.developer.nvidia.com/t/why-warm-up/48565) GPU before computing the statistics and do not forget about asynchronous CUDA kernels execution.
 
@@ -77,7 +79,7 @@ For that, you need to inspect the corresponding Pytorch docs [section](https://p
 ### Report instructions
 After you are done with a code, you can either:
 - Display benchmark results in `pandas.DataFrame` in your `.ipynb` file
-- Display benchmark results in the table in your `.md` file
+- Display benchmark results in the table in your `.pdf` file
 
 ## Task 3: ViT profiling (3 points)
 In this section, you're given a training script for a [Vision Transformer model](https://huggingface.co/docs/transformers/model_doc/vit) on [Dogs vs. Cats dataset](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition).
@@ -97,6 +99,9 @@ The implementation is based on [`lucidrains/vit-pytorch`](https://github.com/luc
        - How long does it take compared to a forward pass?
 - Find deliberate inefficiencies we've left in the implementation and fix them (**2 points**)
 
+We expect that during inspections you will not only examine time and memory consumptions but also provide explanations
+whether acquired results are reasonable.
+
 **Hints:**
 - PyTorch profiler [recipe](https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html)
 - To provide meaningful report of the profiler output, be sure to describe main blocks of the model, analyse if profiler output is expected
@@ -109,7 +114,7 @@ and spotlight model's bottlenecks
 After you are done with investigation and fixes, you can either:
 - Report profiler output AND its meaningful analysis in your `.ipynb` report file.
 Report fixes you made to ViT. Be sure to describe how you found them, why the code was inefficient and why suggested fixes help.
-- The same applies for `.md` file
+- The same applies for `.pdf` file
 
 
 Good luck and have 59 funs!

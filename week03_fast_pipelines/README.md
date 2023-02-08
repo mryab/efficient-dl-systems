@@ -2,6 +2,7 @@
 
 * Lecture: [slides](./lecture.pdf), [video](https://disk.yandex.ru/i/QEfdgByeQCXubw)
 * Seminar: [folder](./seminar), [video](https://disk.yandex.ru/i/LVoOHMISU2LT4Q)
+* Homework: see [homework/README.md](homework/README.md)
 
 ## Further reading
 * [Blog post about reduced precision FP formats](https://moocaholic.medium.com/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407)
