@@ -1,6 +1,5 @@
 datasets==2.9.0
 imageio==2.25.0
-ipywidgets==8.0.4
 jpeg4py==0.1.4
 nvprof==0.2
 opencv-python==4.7.0.68
