@@ -4,6 +4,8 @@ The assignment for this week consists of three parts: all parts are obligatory, 
 Implement your solutions in the folders for the corresponding sections. Create a report for your homework: briefly describe
 the structure of your solution for each section, include benchmark results in the tables, provide explanations of the observed results.
 
+Make sure to install needed packages from `requirements.txt` file in the week's folder.
+
 ## Submission format:
 - For the report you might create `.ipynb` file or `.pdf` file.
 - Create an archive that contains:
