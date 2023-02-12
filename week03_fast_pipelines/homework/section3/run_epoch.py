@@ -55,7 +55,7 @@ def run_epoch(model, train_loader, criterion, optimizer) -> tp.Tuple[float, floa
 
 def main():
     model = get_vit_model()
-    train_loader = dataset.get_train_loader()
+    train_loader = get_train_loader()
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=Settings.lr)
 

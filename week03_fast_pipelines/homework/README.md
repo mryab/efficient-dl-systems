@@ -44,7 +44,7 @@ After you are done with a code, you can either:
 - Run training function with implemented scaling modes in `.ipynb` report
 - Include training logs AND instructions how to run your code in the `.pdf` report
 
-## Task 2: efficient batching for language modelling (4 points)
+## Task 2: efficient batching for language modeling (4 points)
 
 In this part you need to examine the efficiency of the three batching approaches we discussed during the seminar. Let us remind you shortly:
 
