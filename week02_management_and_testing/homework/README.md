@@ -38,7 +38,7 @@ Implement logging the metrics and artifacts during training with [Weights and Bi
 You should log the following values:
 * Training loss and the learning rate
 * All training hyperparameters (including batch size, number of epochs etc., as well as all model and diffusion hyperparameters)
-* Inputs to the model and samples from it after each epoch
+* Inputs to the model (1 batch is enough) and samples from it after each epoch
 
 However, you should **NOT** log the training code for the model.
 
@@ -46,7 +46,8 @@ Logging the hyperparameters and metrics will likely involve some refactoring of 
 You can either place the necessary hyperparameters in a config file or simply have them as constants/argparse defaults 
 defined somewhere reasonable in the training code.
 
-After finishing this task, train the model for at least 100 epochs with default hyperparameters and attach 
+After finishing this task, train the model for at least 100 epochs with default hyperparameters and attach the link to
+your W&B project containing this run to the final report.
 
 # Task 3 (2 points)
 Improve the configuration process of this pipeline using the [Hydra](https://hydra.cc/) library.
@@ -57,7 +58,8 @@ You should create a config that allows adjusting at least the following attribut
 * Number of workers in the dataloader
 * Existence of random flip augmentations
 
-Demonstrate that your integration works by running at least two runs with hyperparameters changed via the config file.
+Demonstrate that your integration works by running at least two *complete* runs (less than 100 epochs is OK) 
+with hyperparameters changed via the config file.
 Here, you should log **only the config** using [run.log_code](https://docs.wandb.ai/ref/python/run#log_code) and show
 that this changes the hyperparameters of the run in W&B.
 
@@ -65,8 +67,9 @@ that this changes the hyperparameters of the run in W&B.
 Make the pipeline reproducible using [Data Version Control](https://dvc.org/). 
 You should end up with a `dvc.yaml` that represents two stages of your experiment with corresponding inputs and outputs: 
 getting the data (yes, you need to refactor that part of the code) and training the model itself.
-Also, you should specify the relevant code and configuration as 
-Lastly, after running your code, you should have a `dvc.lock`
+Also, you should specify the relevant code and configuration as dependencies of the corresponding pipeline stages.
+Lastly, after running your code, you should have a `dvc.lock` that stores hashes of all artifacts in your pipeline.
+Submit both `dvc.yaml` and `dvc.lock` as parts of your solution.
 
 Importantly, modifying any of the relevant modules or hyperparameters should trigger an invalidation of the
 corresponding pipeline stages: that is, `dvc repro` should do nothing if and only if `dvc.lock` is consistent with
