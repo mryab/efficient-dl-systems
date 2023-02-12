@@ -60,6 +60,7 @@ You should create a config that allows adjusting at least the following attribut
 
 Demonstrate that your integration works by running at least two *complete* runs (less than 100 epochs is OK) 
 with hyperparameters changed via the config file.
+From these runs, it should be evident that changing hyperparameters affects the training procedure.
 Here, you should log **only the config** using [run.log_code](https://docs.wandb.ai/ref/python/run#log_code) and show
 that this changes the hyperparameters of the run in W&B.
 
