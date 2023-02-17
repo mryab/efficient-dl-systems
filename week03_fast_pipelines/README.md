@@ -4,6 +4,12 @@
 * Seminar: [folder](./seminar), [video](https://disk.yandex.ru/i/LVoOHMISU2LT4Q)
 * Homework: see [homework/README.md](homework/README.md)
 
+Make sure to install dependencies via
+
+`pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu116`
+
+To run seminar and/or homework code.
+
 ## Further reading
 * [Blog post about reduced precision FP formats](https://moocaholic.medium.com/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407)
 * NVIDIA blog posts about [mixed precision training with Tensor Cores](https://developer.nvidia.com/blog/video-mixed-precision-techniques-tensor-cores-deep-learning/), [Tensor Core performance tips](https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/), [TF32 Tensor Cores](https://developer.nvidia.com/blog/accelerating-ai-training-with-tf32-tensor-cores/)
