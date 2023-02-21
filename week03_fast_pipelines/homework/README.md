@@ -55,7 +55,7 @@ In this part you need to examine the efficiency of the three batching approaches
 **ULTRA DUPER BIG BRAIN**: presort data to sample sequences smartly, preserving similar examples length in the batch
 
 ### Task
-More formally, you need to download [WikiText-103 dataset](https://www.salesforce.com/products/einstein/ai-research/the-wikitext-dependency-language-modeling-dataset/) and implement all the mentioned approaches.
+More formally, you need to download [WikiText-103 dataset](https://blog.salesforceairesearch.com/the-wikitext-long-term-dependency-language-modeling-dataset/) and implement all the mentioned approaches.
 Use only the training subset for all the task's sub-problems.
 
 - For naive batching, implement a Pytorch Dataset class that will parse training data from the source files of the dataset and pad every sample to a fixed `max_length=640`. **(0.5 points)**
