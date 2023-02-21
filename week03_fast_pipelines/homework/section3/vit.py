@@ -21,6 +21,7 @@ class PreNorm(nn.Module):
         self.fn = fn
 
     def forward(self, x, **kwargs):
+        # (づ ◕‿◕ )づ
         x = rearrange(x, "b l c -> b c l")
         x = self.norm(x)
         x = rearrange(x, "b c l -> b l c")
