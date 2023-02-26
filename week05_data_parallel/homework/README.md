@@ -20,7 +20,7 @@ dataset and train a model with **synchronized** Batch Normalization: we aggregat
 during each forward pass. 
 
 Importantly, you have to call a communication primitive **only once** during each forward or backward pass; 
-if you use it more than once, you will only earn up to 40% overall HW points (instead of 60) for this task.
+if you use it more than once, you will only earn up to 40% overall HW points (instead of 70) for this task.
 Additionally, you are **not allowed** to use internal PyTorch functions that compute the backward pass
 of batch normalization: please implement it manually.
 
