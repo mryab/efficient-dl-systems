@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8080:8080
+
+  prom:
+    image: prom/prometheus:v2.27.1
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prom/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+
+  grafana:
+    image: grafana/grafana:7.5.7
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/config.ini:/etc/grafana/config.ini
+      - grafana_data:/var/lib/grafana
+
+  telegraf:
+    image: telegraf:1.8
+    volumes:
+      - ./monitor/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    ports:
+      - 9100:9100
+
+volumes:
+  # store prom metrics between runs
+  prometheus_data: {}
+  grafana_data: {}
