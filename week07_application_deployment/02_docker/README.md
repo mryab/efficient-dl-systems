@@ -4,14 +4,14 @@ Put `vgg16.pt` inside this directory
 
 Install Docker and Docker-compose
 
-####(on ubuntu)
+### On ubuntu
 ```bash
 curl https://get.docker.com -L | bash
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-####(on other system)
+###On other systems
 * [Docker](https://docs.docker.com/engine/install)
 * [Docker compose](https://docs.docker.com/compose/install/)
 
