@@ -71,7 +71,7 @@ We also want a separate [gRPC](https://grpc.io/) service on `9090` port. See pro
 ### Notes
 
 * Pretrained pytorch model `maskrcnn_resnet50_fpn` with `score_threshold = 0.75` works fine for this task
-* You are not limited to run only one process inside docker - use `supervisord` to run as many processes as you want. See [supervisord](./supervisord) folder for example.
+* You are not limited to run only one process inside docker - use `supervisord` to run as many processes as you want. See [supervisord](./../supervisord) folder for example.
 * You can find actual tests in file `tests.py`
 * In order to sanity check your model, tests check that mean IoU is greater than 0.5 - see tests for details
 * Instance classes are the standard from torchvision docs for instance segmentation models - https://pytorch.org/vision/master/auto_examples/plot_visualization_utils.html#instance-seg-output
