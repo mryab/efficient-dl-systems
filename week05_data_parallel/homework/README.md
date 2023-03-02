@@ -3,14 +3,14 @@
 The assignment for this week consists of four parts: the first three are obligatory, and the fourth is a bonus one.
 Include all the files with implemented functions/classes and the report for Tasks 2 (and 4) in your submission.
 
-## Task 1 (10% points)
+## Task 1 (1 point)
 
 Implement the function for deterministic sequential printing of N numbers for N processes,
 using [sequential_print.py](./sequential_print.py) as a template. 
 You should be able to test it with `torchrun --nproc_per_node N sequential_print.py`
 Pay attention to the output format!
 
-## Task 2 (70% points)
+## Task 2 (7 points)
 
 The pipeline you saw in the seminar shows only the basic building blocks of distributed training. Now, let's train
 something actually interesting!
@@ -32,7 +32,7 @@ pipeline with [the](https://pytorch.org/docs/stable/nn.html#torch.nn.parallel.Di
 You need to compare the implementations by training with **at least two** processes.
 * In addition, test the SyncBN layer itself by comparing the results with standard **BatchNorm1d** and changing 
 the number of workers (use at least 1 and 4), the size of activations (128, 256, 512, 1024), and the batch size (32, 64). 
-Compare the results of forward/backward passes with the FP32 inputs from a standard Gaussian distribution and 
+Compare the results of forward/backward passes with the FP32 inputs from the standard Gaussian distribution and 
 the loss function that simply sums the outputs over first N/2 samples (N is the total batch size): 
 a working implementation should have reasonably high `rtol` and `atol` (at least 1e-3).
 * Finally, measure the GPU time (2+ workers) and the memory footprint of standard **SyncBatchNorm** 
@@ -44,7 +44,7 @@ and the infrastructure description (version of PyTorch, number of processes, typ
 
 Use [syncbn.py](./syncbn.py) and [ddp_cifar100.py](./ddp_cifar100.py) as a template. 
 
-## Task 3 (20% points)
+## Task 3 (2 points)
 
 Until now, we only aggregated the gradients across different workers during training. But what if we want to run
 distributed validation on a large dataset as well? In this assignment, you have to implement distributed metric
@@ -55,7 +55,7 @@ Also, make one more quality-of-life improvement of the pipeline by logging the l
 only from the rank-0 process to avoid flooding the standard output of your training command. 
 Submit the training code that includes all enhancements from Tasks 2 and 3.
 
-## Task 4 (bonus, 30% points)
+## Task 4 (bonus, 3 points)
 
 Using [allreduce.py](./allreduce.py) as a template, implement the Ring All-Reduce algorithm
 using only point-to-point communication primitives from `torch.distributed`. 
