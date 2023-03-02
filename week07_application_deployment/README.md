@@ -1,8 +1,7 @@
-# Deployment
+# Week 7: Application deployment
 
-See README files inside directories for more info about how to run stands.
-
-Homework: see the [homework](./homework) folder
+* Lecture/practice: See README files inside directories for more info about how to run stands.
+* Homework: see the [homework](./homework) folder
 
 Run `train_model.py` to generate `vgg16.pt`
 

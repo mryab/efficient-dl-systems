@@ -22,7 +22,7 @@ __This branch corresponds to the ongoing 2023 course. If you want to see full ma
 - [__Week 6:__](./week06_large_models) __Training large models__
   - Lecture: Model parallelism, gradient checkpointing, offloading, sharding.
   - Seminar: Gradient checkpointing and tensor parallelism in practice.
-- __Week 7:__ __Python web application deployment__
+- [__Week 7:__](./week07_application_deployment) __Python web application deployment__
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker, Prometheus, API via HTTP and gRPC.
 - __Week 8:__ __Software for serving neural networks__
   - Lecture/Seminar: Different formats for packing NN: ONNX, TorchScript, IR. Inference servers: OpenVINO, Triton. ML on client devices: TfJS, ML Kit, Core ML.

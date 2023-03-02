@@ -1,7 +1,7 @@
-# Service deployment
+# Week 7 home assignment
 
 We want to create a service for Instance Detection on pictures.
-We don't focus on model quality right now, so it is a great idea to use pretrained model for this task ([such as these for example](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection)) .
+We don't focus on model quality right now, so it is a great idea to use pretrained model for this task (such as [these](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection), for example) .
 
 **[4 points] HTTP endpoint**
 Service should be able to handle `POST /predict` query on port `8080`. Request data is JSON with following structure
