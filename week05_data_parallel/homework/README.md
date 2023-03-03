@@ -25,10 +25,9 @@ Additionally, you are **not allowed** to use internal PyTorch functions that com
 of batch normalization: please implement it manually.
 
 * Also, implement a version of distributed training which is aware of gradient accumulation:
-for each batch that doesn't run `optimizer.step`, you can avoid the All-Reduce step altogether.
+for each batch that doesn't run `optimizer.step`, you can avoid the All-Reduce step for gradients altogether.
 * Compare the performance (in terms of both speed, memory footprint and final quality) of your distributed training 
-pipeline with [the](https://pytorch.org/docs/stable/nn.html#torch.nn.parallel.DistributedDataParallel)
-[primitives](https://pytorch.org/docs/stable/generated/torch.nn.SyncBatchNorm.html) provided by PyTorch. 
+pipeline with the one that uses primitives from PyTorch (i.e., [torch.nn.parallel.DistributedDataParallel](https://pytorch.org/docs/stable/nn.html#torch.nn.parallel.DistributedDataParallel) **and** [torch.nn.SyncBatchNorm](https://pytorch.org/docs/stable/generated/torch.nn.SyncBatchNorm.html)). 
 You need to compare the implementations by training with **at least two** processes.
 * In addition, test the SyncBN layer itself by comparing the results with standard **BatchNorm1d** and changing 
 the number of workers (use at least 1 and 4), the size of activations (128, 256, 512, 1024), and the batch size (32, 64). 
