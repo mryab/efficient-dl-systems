@@ -26,7 +26,7 @@ of batch normalization: please implement it manually.
 
 * Also, implement a version of distributed training which is aware of gradient accumulation:
 for each batch that doesn't run `optimizer.step`, you can avoid the All-Reduce step for gradients altogether.
-* Compare the performance (in terms of both speed, memory footprint and final quality) of your distributed training 
+* Compare the performance (in terms of speed, memory footprint, and final quality) of your distributed training 
 pipeline with the one that uses primitives from PyTorch (i.e., [torch.nn.parallel.DistributedDataParallel](https://pytorch.org/docs/stable/nn.html#torch.nn.parallel.DistributedDataParallel) **and** [torch.nn.SyncBatchNorm](https://pytorch.org/docs/stable/generated/torch.nn.SyncBatchNorm.html)). 
 You need to compare the implementations by training with **at least two** processes.
 * In addition, test the SyncBN layer itself by comparing the results with standard **BatchNorm1d** and changing 
@@ -58,7 +58,7 @@ Submit the training code that includes all enhancements from Tasks 2 and 3.
 
 Using [allreduce.py](./allreduce.py) as a template, implement the Ring All-Reduce algorithm
 using only point-to-point communication primitives from `torch.distributed`. 
-Compare it with the provided implementation of Butterfly All-Reduce, 
-as well as with `torch.distributed.all_reduce` in terms of CPU speed, memory usage and the accuracy of averaging. 
+Compare it with the provided implementation of Butterfly All-Reduce
+and with `torch.distributed.all_reduce` in terms of CPU speed, memory usage and the accuracy of averaging. 
 Specifically, compare custom implementations of All-Reduce with 1–32 workers and compare your implementation of 
 Ring All-Reduce with `torch.distributed.all_reduce` on 1–16 processes and vectors of 1,000–100,000 elements.
