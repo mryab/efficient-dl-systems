@@ -18,7 +18,7 @@ scrape_configs:
   - job_name: 'app-server'
     scrape_interval: 5s
     static_configs:
-      - targets: [ 'app:80' ]
+      - targets: [ 'app:8080' ]
 
   - job_name: 'nginx'
     scrape_interval: 5s
