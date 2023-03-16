@@ -31,3 +31,5 @@
 
 ### Quantization
 * https://arxiv.org/abs/2208.07339
+* https://huggingface.co/blog/hf-bitsandbytes-integration
+* https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html
