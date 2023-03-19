@@ -6,7 +6,7 @@ Include your implementations and report file into a .zip archive and submit it.
 
 
 ## Task 1: knowledge distillation for image classification (6 points)
-0. Finetune ResNet101 on CIFAR10 (**0 points**)
+0. Finetune ResNet101 on CIFAR10 (change only the classification linear layer; don't freeze other weights) (**0 points**)
 Then take untrained ResNet101 model, remove layer3 (except one conv block that creates correct number of channels for the 4-th layer) block out of it and implement 3 training setups:
 1. Train the model on data only (**1 point**)
 2. Train the model on data and add soft cross-entropy between the student (truncated ResNet101) and the teacher (finetuned full ResNet101) (**2 points**)
@@ -19,7 +19,8 @@ For the 3rd subtask you will need to return not only model's outputs but also in
 ### Training setup
 - Use standard Adam optimizer without scheduler
 - Use any suitable batch size from 128 to 512
-- Training stopping criterion: accuracy stabilizes in the first digit after decimal during at least 2 epochs on test set
+- Training stopping criterion: accuracy (measured from 0 to 1) stabilizes in the second digit after decimal during at least 2 epochs on test set.
+That means that you must satisfy condition `torch.abs(acc - acc_prev) < 0.01` for at least two epochs in a row.
 
 ## Task 2: implement quantization aware training for ResNet (4 points)
 1. Take your best model from subtasks 1.1-1.3 and implement quantization aware training for it (**3 points**)
