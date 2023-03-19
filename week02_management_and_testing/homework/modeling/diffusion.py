@@ -22,7 +22,7 @@ class DiffusionModel(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         timestep = torch.randint(1, self.num_timesteps + 1, (x.shape[0],))
-        eps = torch.randn_like(x)
+        eps = torch.rand_like(x)
 
         x_t = (
             self.sqrt_alphas_cumprod[timestep, None, None, None] * x
