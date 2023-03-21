@@ -1,7 +1,7 @@
 # Week 9: Efficient model inference
 
-* Lecture: [slides](./lecture.pdf), video [TBD]
-* Seminar: [notebook](./practice.pdf), video [TBD]
+* Lecture: [slides](./lecture.pdf), video [https://disk.yandex.ru/i/fxmPq6xFKNpIGg]
+* Seminar: [notebook](./practice.pdf), video [https://disk.yandex.ru/i/OTPFOFBX_nH5JA]
 * Homework: see [homework/README.md](homework/README.md)
 
 ## Further reading
