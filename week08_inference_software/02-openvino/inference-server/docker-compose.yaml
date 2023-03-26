@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  ovino-server:
+    image: openvino/model_server:latest
+    command: --model_path /models/vgg16 --model_name vgg16 --port 9000 --log_level INFO
+    ports:
+      - 9000:9000
+    volumes:
+      - ./models_repo:/models
