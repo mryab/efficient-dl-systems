@@ -17,11 +17,3 @@ services:
       - 9090:9090
     volumes:
       - ./prometheus.yaml:/etc/prometheus/prometheus.yml
-
-#  grafana:
-#    image: grafana/grafana:7.5.7
-#    ports:
-#      - 3000:3000
-#    volumes:
-#      - ./datasources:/etc/grafana/provisioning/datasources
-#      - ./config.ini:/etc/grafana/config.ini

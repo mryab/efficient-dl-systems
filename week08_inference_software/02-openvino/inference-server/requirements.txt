@@ -1,1 +1,1 @@
-ovmsclient
+ovmsclient==2022.3
