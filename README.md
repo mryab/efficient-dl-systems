@@ -1,7 +1,7 @@
 # Efficient Deep Learning Systems
 This repository contains materials for the Efficient Deep Learning Systems course taught at the [Faculty of Computer Science](https://cs.hse.ru/en/) of [HSE University](https://www.hse.ru/en/) and [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/).
 
-__This branch corresponds to the ongoing 2023 course. If you want to see full materials of past years, see the ["Past versions"](#past-versions) section.__
+__This branch corresponds to the ongoing 2024 course. If you want to see full materials of past years, see the ["Past versions"](#past-versions) section.__
 
 # Syllabus
 - [__Week 1:__](./week01_intro) __Introduction__
