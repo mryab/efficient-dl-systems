@@ -6,8 +6,10 @@ opencv-python==4.7.0.68
 scikit-image==0.19.3
 pandas==1.5.3
 py-spy==0.3.14
-torch
+einops==0.7.0
+torch==2.2.0
 torchtext
-torchvision
+torchvision==0.16.2
 tqdm==4.64.1
 vit_pytorch==0.40.2
+gdown==4.7.3
