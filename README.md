@@ -33,7 +33,7 @@ Please refer to the course page of your institution for details.
 - [Just Heuristic](https://github.com/justheuristic)
 - [Alexander Markovich](https://github.com/markovka17)
 - [Anton Chigin](https://github.com/achigin)
-- [Ruslan Khaidurov]()
+- [Ruslan Khaidurov](https://github.com/newokaerinasai)
 
 # Past versions
 - [2023](https://github.com/mryab/efficient-dl-systems/tree/2023)
