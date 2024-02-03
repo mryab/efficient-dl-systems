@@ -10,7 +10,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 2:__](./week02_management_and_testing) __Experiment tracking, model and data versioning, testing DL code in Python__
   - Lecture: Experiment management basics and pipeline versioning. Configuring Python applications. Intro to regular and property-based testing.
   - Seminar: Example DVC+Weights & Biases project walkthrough. Intro to testing with pytest.
-- __Week 3:__ __Training optimizations, profiling DL code__
+- [__Week 3:__](./week03_fast_pipelines) __Training optimizations, profiling DL code__
+  - Lecture: Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads. 
+  - Seminar: Automatic Mixed Precision in PyTorch. Dynamic padding for sequence data and JPEG decoding benchmarks. Basics of profiling with py-spy, PyTorch Profiler, PyTorch TensorBoard Profiler, nvprof and Nsight Systems.
 - __Week 4:__ __Basics of distributed ML__
 - __Week 5:__ __Data-parallel training and All-Reduce__
 - __Week 6:__ __Training large models__
