@@ -30,3 +30,4 @@
 * [PyTorch Autograd profiler tutorial](https://pytorch.org/tutorials/beginner/profiler.html)
 * [Nsight Systems](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) and [Nsight Compute](https://docs.nvidia.com/nsight-compute/2022.1/index.html) user guides
 * [Video tutorial about speeding up and profiling neural networks](https://www.youtube.com/watch?v=ySGIaOb_RDY)
+* [Solving Machine Learning Performance Anti-Patterns: a Systematic Approach](https://paulbridger.com/posts/nsight-systems-systematic-optimization/)
