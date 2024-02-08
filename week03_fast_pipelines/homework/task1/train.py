@@ -10,8 +10,8 @@ from dataset import get_train_data
 def train_epoch(
     train_loader: torch.utils.data.DataLoader,
     model: torch.nn.Module,
-    criterion: torch.nn._Loss,
-    optimizer: torch.optim.optimizer.Optimizer,
+    criterion: torch.nn.modules.loss._Loss,
+    optimizer: torch.optim.Optimizer,
     device: torch.device,
 ) -> None:
     model.train()

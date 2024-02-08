@@ -9,7 +9,8 @@ py-spy==0.3.14
 einops==0.7.0
 torch==2.2.0
 torchtext
-torchvision==0.16.2
+torchvision==0.17.0
 tqdm==4.64.1
 vit_pytorch==0.40.2
 gdown==4.7.3
+matplotlib==3.8.2
