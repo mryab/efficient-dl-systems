@@ -13,7 +13,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 3:__](./week03_fast_pipelines) __Training optimizations, profiling DL code__
   - Lecture: Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads. 
   - Seminar: Automatic Mixed Precision in PyTorch. Dynamic padding for sequence data and JPEG decoding benchmarks. Basics of profiling with py-spy, PyTorch Profiler, PyTorch TensorBoard Profiler, nvprof and Nsight Systems.
-- __Week 4:__ __Basics of distributed ML__
+- [__Week 4:__](./week04_distributed) __Basics of distributed ML__
+  - Lecture: Introduction to distributed training. Process-based communication. Parameter Server architecture.
+  - Seminar: Multiprocessing basics. Parallel GloVe training.
 - __Week 5:__ __Data-parallel training and All-Reduce__
 - __Week 6:__ __Training large models__
 - __Week 7:__ __Python web application deployment__
