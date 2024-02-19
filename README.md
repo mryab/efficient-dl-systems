@@ -16,7 +16,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 4:__](./week04_distributed) __Basics of distributed ML__
   - Lecture: Introduction to distributed training. Process-based communication. Parameter Server architecture.
   - Seminar: Multiprocessing basics. Parallel GloVe training.
-- __Week 5:__ __Data-parallel training and All-Reduce__
+- [__Week 5:__](./week05_data_parallel) __Data-parallel training and All-Reduce__
+  - Lecture: Data-parallel training of neural networks. All-Reduce and its efficient implementations.
+  - Seminar: Introduction to PyTorch Distributed. Data-parallel training primitives.
 - __Week 6:__ __Training large models__
 - __Week 7:__ __Python web application deployment__
 - __Week 8:__ __Software for serving neural networks__
