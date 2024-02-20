@@ -1,6 +1,6 @@
 # Week 5: Data-parallel training
 
-* Lecture: TBA
+* Lecture: [link](./lecture.pdf)
 * Seminar: [link](./practice.ipynb)
 * Homework: see the [homework](./homework) folder
 
