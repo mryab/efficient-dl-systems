@@ -1,9 +1,22 @@
 # Week 6: Training large models
 * Lecture: [slides](lecture.pdf), [source](lecture.odp), [video](https://disk.yandex.ru/i/zpUT2zZorGilMw)
 * Practice: [video](https://disk.yandex.ru/i/Bxp_jXdGa011Xw)
-* Homework: [homework](homework.ipynb)
+* Homework: see below
 
-References:
+
+
+### Practice / homework
+In this homework, you can choose one of 3 tasks to complete:
+- Option A: memory-efficient training and inference - recommended if you have a single GPU
+- Option B: benchmarking ZeRO implementations - requires at least two GPUs and some RAM
+- Option C: write your own model parallelism - requires at least two GPUs
+
+You can do more than one, and we'll award bonus points for that, but doing 2 options will yield (much) less than 2x points.
+
+
+
+### References
+
 * PyTorch gradient checkpointing - [API reference](https://pytorch.org/docs/stable/checkpoint.html)
 * PyTorch native ZeRO - [FullyShardedDataParallel](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/)
 * GPipe (one good implementation of pipelining) - [arxiv](https://arxiv.org/abs/1811.06965)
@@ -60,3 +73,22 @@ inputs = torch.randn(16, 1000, requires_grad=True)
 outputs = model(inputs)
 outputs.norm().backward()  # Echo layers will print in the following order: 1 2 3 4 5 3 4 1 2
 ```
+
+__Automatic Tensor Parallelism:__
+
+```
+import transformers
+import tensor_parallel as tp  # pip install tensor_parallel
+tokenizer = transformers.AutoTokenizer.from_pretrained("facebook/opt-13b")
+model = transformers.AutoModelForCausalLM.from_pretrained("facebook/opt-13b")  # use opt-125m for testing
+
+model = tp.tensor_parallel(model, ["cuda:0", "cuda:1"])  # <- each GPU has half the weights
+
+inputs = tokenizer("A cat sat", return_tensors="pt")["input_ids"].to("cuda:0")
+outputs = model.generate(inputs, num_beams=5)
+print(tokenizer.decode(outputs[0])) # A cat sat on my lap for a few minutes ...
+
+model(input_ids=inputs, labels=inputs).loss.backward()  # training works as usual
+```
+
+Note: [tensor_parallel](https://github.com/BlackSamorez/tensor_parallel) is one of the simplest ways to do this kind of distributed training, but not the fastest one. If you want to squeeze every last bit of performance, use [DeepSpeed](https://github.com/microsoft/DeepSpeed) or similar specialized frameworks (see `./homework_b.md`)
