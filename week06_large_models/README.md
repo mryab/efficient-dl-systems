@@ -42,6 +42,8 @@ model = tp.tensor_parallel(model, ['cuda:0', 'cuda:1'])
 outputs_as_usual = model(input_as_usual)
 ```
 
+Note: [tensor_parallel](https://github.com/BlackSamorez/tensor_parallel) is one of the simplest ways to do this kind of distributed training, but not the fastest one. If you want to squeeze every last bit of performance, use [DeepSpeed](https://github.com/microsoft/DeepSpeed) or similar specialized frameworks (see `./homework_b.md`)
+
 __Gradient checkpointing:__
 ```python
 import torch
@@ -73,22 +75,3 @@ inputs = torch.randn(16, 1000, requires_grad=True)
 outputs = model(inputs)
 outputs.norm().backward()  # Echo layers will print in the following order: 1 2 3 4 5 3 4 1 2
 ```
-
-__Automatic Tensor Parallelism:__
-
-```
-import transformers
-import tensor_parallel as tp  # pip install tensor_parallel
-tokenizer = transformers.AutoTokenizer.from_pretrained("facebook/opt-13b")
-model = transformers.AutoModelForCausalLM.from_pretrained("facebook/opt-13b")  # use opt-125m for testing
-
-model = tp.tensor_parallel(model, ["cuda:0", "cuda:1"])  # <- each GPU has half the weights
-
-inputs = tokenizer("A cat sat", return_tensors="pt")["input_ids"].to("cuda:0")
-outputs = model.generate(inputs, num_beams=5)
-print(tokenizer.decode(outputs[0])) # A cat sat on my lap for a few minutes ...
-
-model(input_ids=inputs, labels=inputs).loss.backward()  # training works as usual
-```
-
-Note: [tensor_parallel](https://github.com/BlackSamorez/tensor_parallel) is one of the simplest ways to do this kind of distributed training, but not the fastest one. If you want to squeeze every last bit of performance, use [DeepSpeed](https://github.com/microsoft/DeepSpeed) or similar specialized frameworks (see `./homework_b.md`)
