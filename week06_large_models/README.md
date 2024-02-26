@@ -11,9 +11,14 @@ In this homework, you can choose one of 3 tasks to complete:
 - Option B: [`./homework_b.md`](./homework_b.md) benchmarking ZeRO implementations - requires at least two GPUs and some RAM
 - Option C: [`./homework_c.md`](./homework_c.md) write your own model parallelism - requires at least two GPUs
 
-You can do more than one, and we'll award bonus points for that, but doing 2 options will yield (much) less than 2x points. If you're an enrolled student, please only submit the files that you changed (i.e. do not submit homework_b.md if you did option A or C)
+You can do more than one, and we'll award bonus points for that, but doing 2 options will yield (much) less than 2x points. 
+If you're an enrolled student, please only submit the files that you changed (i.e. do not submit homework_b.md if you did option A or C)
 
-We recommend that you choose options B and C if you have access to a computer with at least two GPUs. For YSDA and HSE students, you can use either DataSphere or one of the GPU servers available for this course (recommended). If you are an online student, you can try to register for kaggle kernels ([they ley you run on 2x T4](https://www.kaggle.com/discussions/product-feedback/361104)) in jupyter-like interface. That said, implementing assignments B and C in Kaggle is more difficult than intended. For non-enrolled online students, we recommend option A unless you have access to some other multi-GPU-hardware or are intentionally masochistic.
+We recommend that you choose options B and C if you have access to a computer with at least two GPUs.
+For YSDA and HSE students, you can use either DataSphere or one of the GPU servers available for this course (recommended). 
+If you are an online student, you can try to register for Kaggle kernels ([they ley you run on 2x T4](https://www.kaggle.com/discussions/product-feedback/361104)) in a jupyter-like interface. 
+That said, implementing assignments B and C in Kaggle is more difficult than intended. 
+For non-enrolled online students, we recommend option A unless you have access to some other multi-GPU-hardware or are intentionally masochistic.
 
 
 ### References
