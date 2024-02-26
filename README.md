@@ -19,7 +19,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 5:__](./week05_data_parallel) __Data-parallel training and All-Reduce__
   - Lecture: Data-parallel training of neural networks. All-Reduce and its efficient implementations.
   - Seminar: Introduction to PyTorch Distributed. Data-parallel training primitives.
-- __Week 6:__ __Training large models__
+- [__Week 6:__](./week06_large_models) __Training large models__
+  - Lecture: Model parallelism, gradient checkpointing, offloading, sharding. 
+  - Seminar: Gradient checkpointing and tensor parallelism in practice.
 - __Week 7:__ __Python web application deployment__
 - __Week 8:__ __Software for serving neural networks__
 - __Week 9:__ __Efficient model inference__
