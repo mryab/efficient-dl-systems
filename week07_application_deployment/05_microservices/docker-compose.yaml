@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  inference-api:
+    build:
+      dockerfile: Dockerfile.inference_api
+      context: .
+    ports:
+      - 50051:50051
+
+  client-api:
+    build:
+      dockerfile: Dockerfile.client_api
+      context: .
+    ports:
+      - 8081:80
+
+  image-server:
+    image: python:3.7
+    command: python3 -m http.server -d /data --bind 0.0.0.0 9090
+    ports:
+      - 9091:9090
+    volumes:
+      - ./imgs:/data
