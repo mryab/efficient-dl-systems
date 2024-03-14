@@ -24,7 +24,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
   - Seminar: Gradient checkpointing and tensor parallelism in practice.
 - [__Week 7:__](./week07_application_deployment) __Python web application deployment__
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker, Prometheus, API via HTTP and gRPC.
-- __Week 8:__ __Software for serving neural networks__
+- [__Week 8:__](./week08_inference_software) __LLM inference optimizations and software__
+  - Lecture: Inference speed metrics. KV caching, batch inference, continuous batching. FlashAttention with its modifications and PagedAttention. Overview of popular LLM serving frameworks.
+  - Seminar: Basics of the Triton language. Layer fusion in PyTorch and Triton. Implementation of KV caching, FlashAttention in practice.
 - __Week 9:__ __Efficient model inference__
 - __Week 10:__ __Guest lecture__
 
