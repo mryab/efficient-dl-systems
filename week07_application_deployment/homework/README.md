@@ -9,7 +9,7 @@ You can retrieve them from the [FasterRCNN_ResNet50_FPN_V2](https://pytorch.org/
 ```python
 from torchvision.models.detection import FasterRCNN_ResNet50_FPN_V2_Weights
 
-print(FasterRCNN_ResNet50_FPN_V2_Weights.meta['categories'])
+print(FasterRCNN_ResNet50_FPN_V2_Weights.COCO_V1.meta['categories'])
 ```
 
 **[4 points] HTTP endpoint:**
