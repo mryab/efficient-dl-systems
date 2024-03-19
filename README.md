@@ -27,7 +27,9 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 8:__](./week08_inference_software) __LLM inference optimizations and software__
   - Lecture: Inference speed metrics. KV caching, batch inference, continuous batching. FlashAttention with its modifications and PagedAttention. Overview of popular LLM serving frameworks.
   - Seminar: Basics of the Triton language. Layer fusion in PyTorch and Triton. Implementation of KV caching, FlashAttention in practice.
-- __Week 9:__ __Efficient model inference__
+- [__Week 9:__](./week09_compression) __Efficient model inference__
+  - Lecture: Hardware utilization metrics for deep learning. Knowledge distillation, quantization, LLM.int8(), SmoothQuant, GPTQ. Efficient model architectures. Speculative decoding.
+  - Seminar: Measuring Memory Bandwidth Utilization in practice. Data-free quantization, GPTq, and SmoothQuant in PyTorch.
 - __Week 10:__ __Guest lecture__
 
 ## Grading
