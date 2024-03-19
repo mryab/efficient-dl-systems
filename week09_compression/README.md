@@ -1,6 +1,6 @@
 # Week 9: Efficient model inference
 
-* Lecture: [slides](./lecture.pdf)
+* Lecture: [slides](./lecture_compressed.pdf)
 * Seminar: [notebook](./practice.ipynb)
 * Homework: see [homework/README.md](homework/README.md)
 
