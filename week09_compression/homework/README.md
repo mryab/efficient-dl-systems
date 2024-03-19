@@ -6,13 +6,18 @@ Include your implementations and report file into a .zip archive and submit it.
 
 
 ## Task 1: knowledge distillation for image classification (6 points)
-0. Finetune ResNet101 on CIFAR10: change only the classification linear layer; don't freeze other weights (**0 points**)
+
+0. Finetune ResNet101 on CIFAR10: change only the classification linear layer [*]; don't freeze other weights (**0 points**)
 
 Then take untrained ResNet101 model, remove layer3 (except one conv block that creates correct number of channels for the 4-th layer) block out of it and implement 3 training setups:
 1. Train the model on data only (**1 point**)
 2. Train the model on data and add soft cross-entropy between the student (truncated ResNet101) and the teacher (finetuned full ResNet101) (**2 points**)
 3. Train the model as in the 2nd subtask but also add MSE loss between corresponding layer1, layer2 and layer 4 features between the student and the teacher (**3 points**)
 4. Report test accuracy for each of the models
+
+[\*] Vanilla ResNet is not very well suited for CIFAR: it downsamples the image by x32, while images in CIFAR are 32x32 pixels. So you can
+- upsample images (easiest to implement, but you will perform more computations)
+- slightly change the first layers (e.g. make `model.conv1` a 3x3 convolution with stride 1 and remove `model.maxpool`)
 
 Feel free to use dataset and model implementation from torch. For losses in 2nd and 3rd subtasks use simple average of all summands.
 For the 3rd subtask you will need to return not only model's outputs but also intermediate feature maps.
