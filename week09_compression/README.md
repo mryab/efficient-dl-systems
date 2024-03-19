@@ -8,9 +8,26 @@
 You can use [conda](https://docs.anaconda.com/free/miniconda/), [mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) or [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) to create the environment.
 
 ```
-conda create -n inference python=3.10 pytorch torchvision torchaudio pytorch-cuda=11.8  matplotlib seaborn numpy tqdm ipywidgets jupyterlab_widgets jupyterlab tqdm -c pytorch -c nvidia -y
+conda create -n inference \
+    python=3.10 \
+    pytorch=2.2.1 \
+    torchvision=0.17.1 \
+    torchaudio=2.2.1 \
+    pytorch-cuda=11.8 \
+    matplotlib=3.8.0 \
+    seaborn=0.12.2 \
+    numpy=1.26.4 \
+    ipywidgets=8.1.2 \
+    jupyterlab_widgets=3.0.10 \
+    jupyterlab=4.0.11 \
+    tqdm=4.65.0 \
+    -c pytorch -c nvidia -y
 
 conda activate inference
+
+# To run part with auto-gptq
+pip install auto-gptq==0.7.1 accelerate==0.28.0
+pip install --upgrade git+https://github.com/huggingface/transformers.git
 
 # To run part with Smoothquant
 cd ~
@@ -19,6 +36,7 @@ cd smoothquant
 python setup.py install
 cd path/to/efficient-dl-systems/week09_compression
 
+# Finally, running notebook
 jupyter lab --no-browser
 ```
 
