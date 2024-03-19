@@ -26,10 +26,11 @@ That means that you must satisfy condition `torch.abs(acc - acc_prev) < 0.01` fo
 ## Task 2: use `deepsparse` to prune & quantize your model (4 points)
 
 0. Please, read the whole task description before starting it.
-1. Install https://docs.neuralmagic.com/get-started/install `deepsparse==1.7.0` and `sparseml==1.7.0`. Note: they might not work smoothly with last torch versions. If so, you can downgrade to `torch==1.12.1`.
+1. Install `deepsparse==1.7.0` and `sparseml==1.7.0`. Note: they might not work smoothly with last torch versions. If so, you can downgrade to `torch==1.12.1`.
 2. Take your best trained model from subtasks 1.1-1.3 and run pruning + quantization-aware-training, adapting the following [example](./example_train_sparse_and_quantize.py). You will need to change/implement what is marked by #TODO and report test accuracy of both models. (**3 points**)
-3. Take `onnx` baseline (best trained model from subtask 1.1 - 1.3) and pruned-quantized version and measure speed of both models on cpu using `deepsparse.benchmark` at batch sizes 1 and 32. You may find [this page](https://web.archive.org/web/20240319095504/https://docs.neuralmagic.com/user-guides/deepsparse-engine/benchmarking/) helpful.
- (**1 point**) 
+3. Take `onnx` baseline (best trained model from subtask 1.1 - 1.3) and pruned-quantized version and measure speed of both models on cpu using `deepsparse.benchmark` at batch sizes 1 and 32. (**1 point**) 
+
+For 2.3, you may find [this page](https://web.archive.org/web/20240319095504/https://docs.neuralmagic.com/user-guides/deepsparse-engine/benchmarking/) helpful.
 
 You shouldn't use training stopping criterion in this part, since sparsification recipe relies on having certain amount of epochs.
 

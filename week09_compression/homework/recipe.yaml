@@ -1,0 +1,31 @@
+modifiers:
+    - !GlobalMagnitudePruningModifier
+        init_sparsity: 0.05
+        final_sparsity: 0.8
+        start_epoch: 0.0
+        end_epoch: 30.0
+        update_frequency: 1.0
+        params: __ALL_PRUNABLE__
+
+    - !SetLearningRateModifier
+        start_epoch: 0.0
+        learning_rate: 0.05
+
+    - !LearningRateFunctionModifier
+        start_epoch: 30.0
+        end_epoch: 50.0
+        lr_func: cosine
+        init_lr: 0.05
+        final_lr: 0.001
+
+    - !QuantizationModifier
+        start_epoch: 50.0
+        freeze_bn_stats_epoch: 53.0
+
+    - !SetLearningRateModifier
+        start_epoch: 50.0
+        learning_rate: 10e-6
+
+    - !EpochRangeModifier
+        start_epoch: 0.0
+        end_epoch: 55.0
