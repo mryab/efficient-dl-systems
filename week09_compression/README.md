@@ -27,7 +27,7 @@ conda activate inference
 
 # To run part with auto-gptq
 pip install auto-gptq==0.7.1 accelerate==0.28.0
-pip install --upgrade git+https://github.com/huggingface/transformers.git
+pip install --upgrade git+https://github.com/huggingface/transformers.git@56b64bf
 
 # To run part with Smoothquant
 cd ~
