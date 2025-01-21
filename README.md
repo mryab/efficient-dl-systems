@@ -30,7 +30,7 @@ __This branch corresponds to the ongoing 2024 course. If you want to see full ma
 - [__Week 9:__](./week09_compression) __Efficient model inference__
   - Lecture: Hardware utilization metrics for deep learning. Knowledge distillation, quantization, LLM.int8(), SmoothQuant, GPTQ. Efficient model architectures. Speculative decoding.
   - Seminar: Measuring Memory Bandwidth Utilization in practice. Data-free quantization, GPTq, and SmoothQuant in PyTorch.
-- __Week 10:__ __Guest lecture__
+- [__Week 10:__](./week10_invited) __MLOps, k8s, GitOps and other acronyms__ by [Gleb Vazhenin](https://github.com/punkerpunker), Bumble
 
 ## Grading
 There will be several home assignments (spread over multiple weeks) on the following topics:
