@@ -12,7 +12,7 @@ __This branch corresponds to the ongoing 2025 course. If you want to see full ma
   - Seminar: Example DVC+Weights & Biases project walkthrough. Intro to testing with pytest.
 - __Week 3:__ __Training optimizations, profiling DL code__
 - __Week 4:__ __Data-parallel training and All-Reduce__
-- __Week 5:__ __Sharded data-parallel training, distributed training optimizations
+- __Week 5:__ __Sharded data-parallel training, distributed training optimizations__
 - __Week 6:__ __Training large models__
 - __Week 7:__ __Python web application deployment__
 - __Week 8:__ __LLM inference optimizations and software__
