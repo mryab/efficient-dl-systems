@@ -7,7 +7,9 @@ __This branch corresponds to the ongoing 2025 course. If you want to see full ma
 - [__Week 1:__](./week01_intro) __Introduction__
   - Lecture: Course overview and organizational details. Core concepts of the GPU architecture and CUDA API.
   - Seminar: CUDA operations in PyTorch. Introduction to benchmarking.
-- __Week 2:__ __Experiment tracking, model and data versioning, testing DL code in Python__
+- [__Week 2:__](./week02_management_and_testing) __Experiment tracking, model and data versioning, testing DL code in Python__
+  - Lecture: Experiment management basics and pipeline versioning. Configuring Python applications. Intro to regular and property-based testing.
+  - Seminar: Example DVC+Weights & Biases project walkthrough. Intro to testing with pytest.
 - __Week 3:__ __Training optimizations, profiling DL code__
 - __Week 4:__ __Data-parallel training and All-Reduce__
 - __Week 5:__ __Sharded data-parallel training, distributed training optimizations
