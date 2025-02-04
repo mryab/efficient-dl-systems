@@ -8,7 +8,7 @@ pandas==1.5.3
 py-spy==0.3.14
 torch==2.3.0
 torchtext
-torchvision==0.17.0
+torchvision==0.18.0
 tqdm==4.64.1
 vit_pytorch==0.40.2
 matplotlib==3.8.2
