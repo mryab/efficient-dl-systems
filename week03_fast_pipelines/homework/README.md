@@ -64,7 +64,7 @@ Let us remind you of them shortly:
 **ULTRA DUPER BIG BRAIN**: pack all sequences into one long sequence and generate metadata that indicates where each original sequence starts and ends
 
 ### Task
-More formally, you need to download [WikiText-103 dataset](https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-raw-v1.zip) and implement all the mentioned approaches.
+More formally, you need to download [WikiText-103 dataset (dropbox)](https://www.dropbox.com/scl/fi/e6oqpx6iuos7kn9m139z7/wikitext-103-raw-v1.zip?rlkey=81evwbaqfkxtckj8zhks7yied&st=6ept2pdm&dl=0), [WikiText-103 dataset (yandex disk)](https://disk.yandex.ru/d/xwMXnteHKDqehw) and implement all the mentioned approaches.
 Use only the training subset for all the task's subproblems.
 
 - For naive batching, implement a Pytorch `Dataset` class that will parse training data from the source files of the dataset and pad every sample to a fixed `max_length=640`. **(0.5 points)**
