@@ -86,7 +86,7 @@ Don't forget that you also need to build a correct attention mask to prevent cro
 
 For each of the implemented methods (and all variations of the third method), mock one training epoch and measure minimum, maximum, mean and median batch processing times.
 To mock a training epoch, you need to construct a small GPT-2-like model: use `nn.Embedding` layer, `PositionalEncoding` class from `transformer.py` file and a single `nn.TransformerDecoder` layer with a hidden size of 1024 and 8 heads.
-For tokenization, use `torchtext.data.utils.get_tokenizer("basic_english")`.
+For tokenization, use `tokenize` method of  `AutoTokenizer.from_pretrained("bert-base-uncased")`.
 Run one epoch **without a backward pass**.
 Make sure you've [warmed up](https://forums.developer.nvidia.com/t/why-warm-up/48565) the GPU before computing the statistics and do not forget about asynchronous CUDA kernel execution.
 
