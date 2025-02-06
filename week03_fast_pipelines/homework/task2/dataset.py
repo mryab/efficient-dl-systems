@@ -3,6 +3,7 @@ from typing import Optional
 import torch
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import Sampler, IterableDataset
+from transformers import AutoTokenizer
 
 
 MAX_LENGTH = 640
