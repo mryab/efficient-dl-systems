@@ -1,4 +1,4 @@
-# Week 6: Training large models
+# Large Models
 * Lecture: [slides](lecture.pdf), [source](lecture.odp), [video](https://disk.yandex.ru/i/zpUT2zZorGilMw)
 * Practice: [video](https://disk.yandex.ru/i/Bxp_jXdGa011Xw)
 * Homework: see below
