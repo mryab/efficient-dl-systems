@@ -10,6 +10,8 @@ This homework consists of two parts:
 - Part 1: [`./practice_part1.ipynb`](./practice_part1.ipynb) - memory-efficient training and inference
 - Part 2: **TBU** - implementing model and sequence parallelism
 
+Part 1 will require you to implement memory-saving techniques such as offloading and gradient checkpointing / accumulation. To implement offloading, you may either write your own low-level code, or use the recommended trick: write your own [autograd.Function](https://pytorch.org/docs/stable/autograd.html#torch.autograd.Function) (similar to gradient checkpoint function) that moves the requisite modules on device just in time for computation. Our practice video ('25) contains some tips on extending autograd functions, but those are optional.
+
 Part 2 is much more convenient with multiple GPUs - though, it can *potentially* be solved by emulating GPUs with CPU-only code. 
 For YSDA and HSE students, you can use either DataSphere or one of the GPU servers available for this course (recommended). If you are an online student, you can try to register for kaggle kernels ([they ley you run on 2x T4](https://www.kaggle.com/discussions/product-feedback/361104)) in jupyter-like interface. That said, implementing assignments B and C in Kaggle is more difficult than intended. For non-enrolled online students, we recommend option A unless you have access to some other multi-GPU-hardware or are intentionally masochistic.
 
