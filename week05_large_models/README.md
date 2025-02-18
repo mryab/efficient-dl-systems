@@ -7,7 +7,7 @@
 
 ### Practice / homework
 This homework consists of two parts:
-- Part 1: [`./homework_part1.ipynb`](./homework_part1.ipynb) - memory-efficient training and inference
+- Part 1: [`./practice_part1.ipynb`](./practice_part1.ipynb) - memory-efficient training and inference
 - Part 2: **TBU** - implementing tensor parallelism
 
 Part 2 is much more convenient with multiple GPUs - though, it can *potentially* be solved by emulating GPUs with CPU-only code. 
