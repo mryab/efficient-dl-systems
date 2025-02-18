@@ -21,7 +21,7 @@ def train_epoch(
         images = images.to(device)
         labels = labels.to(device)
 
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast(device.type, dtype=torch.float16):
             outputs = model(images)
             loss = criterion(outputs, labels)
         # TODO: your code for loss scaling here

@@ -2,7 +2,8 @@ from typing import Optional
 
 import torch
 from torch.utils.data.dataset import Dataset
-from torch.utils.data import Sampler
+from torch.utils.data import Sampler, IterableDataset
+from transformers import AutoTokenizer
 
 
 MAX_LENGTH = 640
@@ -24,11 +25,19 @@ class BigBrainDataset(Dataset):
         pass
 
 
-class UltraDuperBigBrainDataset(Dataset):
+class UltraBigBrainDataset(Dataset):
     def __init__(self, data_path: str, max_length: int = MAX_LENGTH, n_bins: int = 1):
         pass
 
     def __getitem__(self, idx: int):
+        pass
+
+
+class UltraDuperBigBrainDataset(IterableDataset):
+    def __init__(self, data_path: str, max_length: int = MAX_LENGTH):
+        pass
+
+    def __iter__(self):
         pass
 
 
@@ -44,7 +53,7 @@ def collate_fn(
     pass
 
 
-class UltraDuperBigBrainBatchSampler(Sampler):
+class UltraBigBrainBatchSampler(Sampler):
 
     def __init__(self, batch_size: int, max_length: Optional[int] = MAX_LENGTH):
         pass

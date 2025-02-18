@@ -12,6 +12,7 @@
 * [Automatic Mixed Precision in PyTorch](https://pytorch.org/docs/stable/amp.html)
 * [TF32 section of PyTorch CUDA docs](https://pytorch.org/docs/stable/notes/cuda.html#tensorfloat-32-tf32-on-ampere-devices)
 * [FP8 Formats for Deep Learning paper](https://arxiv.org/abs/2209.05433)
+* [PyTorch Architecture Optimization](https://github.com/pytorch/ao) for FP8 training and other optimizations
 * [Float8 in PyTorch discussion](https://dev-discuss.pytorch.org/t/float8-in-pytorch-1-x/1815)
 * [AMP](https://www.deepspeed.ai/docs/config-json/#automatic-mixed-precision-amp-training-options), [FP16](https://www.deepspeed.ai/docs/config-json/#fp16-training-options) and [BF16](https://www.deepspeed.ai/docs/config-json/#bfloat16-training-options) in DeepSpeed
 * [PyTorch Performance Tuning Guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#)

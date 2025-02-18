@@ -8,14 +8,14 @@ from tqdm import tqdm, trange
 
 from hparams import config
 
-wandb.init(config=config, project="effdl_example", name="baseline")
-
 def compute_accuracy(preds, targets):
     result = (targets == preds).float().sum()
     return result
 
 
 def main():
+    wandb.init(config=config, project="effdl_example", name="baseline")
+
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)),

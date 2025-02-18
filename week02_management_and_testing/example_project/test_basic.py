@@ -5,7 +5,7 @@ from train import compute_accuracy
 
 def test_arange_elems():
     arr = torch.arange(0, 10, dtype=torch.float)
-    assert torch.allclose(arr[-1], torch.tensor([9]).float())
+    assert torch.allclose(arr[-1], torch.tensor([9]).float())  #
 
 def test_div_zero():
     a = torch.zeros(1,dtype=torch.long)
@@ -16,7 +16,7 @@ def test_div_zero():
 
 def test_div_zero_python():
     with pytest.raises(ZeroDivisionError):
-        1/0
+        1/0  #
 
 def test_accuracy():
     preds = torch.randint(0,2,size=(100,))
@@ -27,7 +27,7 @@ def test_accuracy():
     preds = torch.tensor([1,2,3,0,0,0])
     targets = torch.tensor([1,2,3,4,5,6])
 
-    assert compute_accuracy(preds, targets) == 0.5
+    assert compute_accuracy(preds, targets) == 0.5  # This is bad - why?
 
 @pytest.mark.parametrize("preds,targets,result",[
     (torch.tensor([1,2,3]),torch.tensor([1,2,3]), 1.0),
