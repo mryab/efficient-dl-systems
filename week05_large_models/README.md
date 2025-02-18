@@ -8,7 +8,7 @@
 ### Practice / homework
 This homework consists of two parts:
 - Part 1: [`./practice_part1.ipynb`](./practice_part1.ipynb) - memory-efficient training and inference
-- Part 2: **TBU** - implementing tensor parallelism
+- Part 2: **TBU** - implementing model and sequence parallelism
 
 Part 2 is much more convenient with multiple GPUs - though, it can *potentially* be solved by emulating GPUs with CPU-only code. 
 For YSDA and HSE students, you can use either DataSphere or one of the GPU servers available for this course (recommended). If you are an online student, you can try to register for kaggle kernels ([they ley you run on 2x T4](https://www.kaggle.com/discussions/product-feedback/361104)) in jupyter-like interface. That said, implementing assignments B and C in Kaggle is more difficult than intended. For non-enrolled online students, we recommend option A unless you have access to some other multi-GPU-hardware or are intentionally masochistic.
