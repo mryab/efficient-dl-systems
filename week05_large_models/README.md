@@ -8,7 +8,7 @@
 ### Practice / homework
 This homework consists of two parts:
 - Part 1: [`./practice_part1.ipynb`](./practice_part1.ipynb) [![open in colab](https://camo.githubusercontent.com/96889048f8a9014fdeba2a891f97150c6aac6e723f5190236b10215a97ed41f3/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667)](https://colab.research.google.com/github/mryab/efficient-dl-systems/blob/main/week05_large_models/practice_part1.ipynb) - memory-efficient training and inference
-- Part 2: **TBU** - implementing model and sequence parallelism
+- Part 2: [`./practice_part2.ipynb`](./practice_part2.ipynb) [![open in colab](https://camo.githubusercontent.com/96889048f8a9014fdeba2a891f97150c6aac6e723f5190236b10215a97ed41f3/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667)](https://colab.research.google.com/github/mryab/efficient-dl-systems/blob/main/week05_large_models/practice_part2.ipynb) - implementing model and sequence parallelism
 
 Part 1 will require you to implement memory-saving techniques such as offloading and gradient checkpointing / accumulation. To implement offloading, you may either write your own low-level code, or use the recommended trick: write your own [autograd.Function](https://pytorch.org/docs/stable/autograd.html#torch.autograd.Function) (similar to gradient checkpoint function) that moves the requisite modules on device just in time for computation. Our practice video ('25) contains some tips on extending autograd functions, but those are optional.
 
