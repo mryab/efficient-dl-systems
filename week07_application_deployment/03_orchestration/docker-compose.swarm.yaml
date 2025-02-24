@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  server:
+    image: halverneus/static-file-server:latest
+    deploy:
+      mode: replicated
+      replicas: 3  # Добавляем 2 реплики этого сервиса
+    volumes:
+      - /etc:/target-folder
+    environment:
+      FOLDER: /target-folder
+    ports:
+      - "9090:8080"
