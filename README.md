@@ -16,9 +16,10 @@ __This branch corresponds to the ongoing 2025 course. If you want to see full ma
 - [__Week 4:__](./week04_data_parallel) __Data-parallel training and All-Reduce__
   - Lecture: Introduction to distributed training. Data-parallel training of neural networks. All-Reduce and its efficient implementations.
   - Seminar: Introduction to PyTorch Distributed. Data-parallel training primitives.
-- __Week 5:__ __Sharded data-parallel training, distributed training optimizations__
+- [__Week 5:__](./week05_large_models) __Sharded data-parallel training, distributed training optimizations__
 - __Week 6:__ __Training large models__
-- __Week 7:__ __Python web application deployment__
+- [__Week 7:__](./week07_application_deployment) __Python web application deployment__
+  - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker, Prometheus, API via HTTP and gRPC.
 - __Week 8:__ __LLM inference optimizations and software__
 - __Week 9:__ __Efficient model inference__
 - __Week 10:__ Guest lecture
