@@ -1,0 +1,10 @@
+torch==2.1.2
+torchvision==0.16.2
+numpy==1.26.4
+grpcio-tools
+grpcio
+fastapi
+uvicorn[standard]
+grequests
+aiohttp
+furl

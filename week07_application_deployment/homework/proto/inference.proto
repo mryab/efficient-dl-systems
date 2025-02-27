@@ -1,0 +1,14 @@
+syntax = "proto3";
+package inference;
+
+service InstanceDetector {
+  rpc Predict(InstanceDetectorInput) returns (InstanceDetectorOutput);
+}
+
+message InstanceDetectorInput {
+  string url = 1;
+}
+
+message InstanceDetectorOutput {
+  repeated string objects = 1;
+}
