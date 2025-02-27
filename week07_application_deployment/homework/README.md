@@ -76,7 +76,7 @@ The contract is the same as for the HTTP endpoint.
 * Create a **private** GitHub repository
 * Install [greater-solution-extractor-59](https://github.com/apps/greater-solution-extractor-59) to your account and authorize it to your newly created repo.
 * Put `Dockerfile` in the root of the repository. This Dockerfile should assemble all code in your repo **and the model checkpoint** into the working service.
-* Go to [http://week07.hareburrow.space:8080](http://week07.hareburrow.space:8080) , use `student`/`Student!1` for login.
+* Go to [Jenkins site](https://jenkins.edl07.mom) , use `student`/`Student228!` for login.
 * Build `week07-pipeline` with your repo as a parameter.
 * After successful build, click `Keep this build forever`
 * This link to your successful (or maybe only partially successful) is the solution for this homework - send it via anytask/LMS.

@@ -1,6 +1,6 @@
 # Week 7: Application deployment 
 
-cred. Alex Kosmos
+Designed by Alex Kosmos ❤️❤️❤️️
 
 * Lecture/practice: TBA. See README files inside numbered directories for more info about how to run stands.
 * Homework: see the [homework](./homework) folder
