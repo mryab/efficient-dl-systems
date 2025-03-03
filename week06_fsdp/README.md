@@ -1,0 +1,62 @@
+# Week 6 assignment
+
+## Task 1 — `FULL_SHARD` (no overlap) (4 points)
+
+`hw_fsdp.py` contains a draft of a simple FSDP implementation (we'll call it
+hwFSDP).
+
+- Fill in the TODO's in `hw_fsdp.py` to achieve a functioning FSDP
+  implementation.
+- Validate your hwFSDP against FSDP2 using `train.py` (more info in
+  [Notes](#notes) section).
+- Make sure your losses and grad norms match the ones of a FSDP2 run. Attach
+  both runs' logs for validation.
+- Make sure to free unsharded params after each `FSDPModule`'s forward and
+  backward.
+- Make sure to free unsharded grads after each `FSDPModule`'s reduce-scatter.
+- Attach a memory snapshot of a hwFSDP run for validation.
+- Make sure the memory usage is similar to the one of FSDP2 (attach a memory
+snapshot of a FSDP2 run as well).
+
+No computation / communication overlap is required in this part of the
+assignment.
+
+## Task 2 — `FULL_SHARD` (implicit forward prefetch) (2 points)
+
+- Make changes to hwFSDP to overlap forward communications (parameter gathering)
+  with forward computations.
+- Make sure losses and grad norms still match the FSDP2 ones (or are close).
+- Make sure memory usage is still fine.
+
+## Task 3 — `FULL_SHARD` (explicit backward prefetch) (2 points)
+
+- Overlap backward communications (gradient reduction and parameter gathering)
+  with backward computations.
+- Just as before, validate losses and grad norms, make sure memory usage is
+  okay.
+
+## Bonus
+
+### Activation Checkpointing support (1 point)
+
+- Make changes to hwFSDP to support using activation checkpointing with hwFSDP.
+- Validate losses, grad norms and memory, if you've achieved overlap make sure
+  it's still there.
+
+### `reshard_after_forward=False` support (1 point)
+
+- Make changes to hwFSDP to support no resharding after forward (aka ZeRO-2).
+- Validate losses, grad norms and memory, if you've achieved overlap make sure
+  it's still there.
+
+## Notes
+
+- It is recommended to debug your code using a
+  [dev-container](https://code.visualstudio.com/docs/devcontainers/containers)
+  with configuration provided in `.devcontainer.json` and debug configs from
+  `.vscode/launch.json`.
+- Debug configs launch hwFSDP and FSDP2 runs of the `train.py` script.
+- `train.py` runs a debug Llama pre-train, logs metrics, saves profiling traces
+  and memory snapshots.
+- Overlap can be checked using profiling traces. To view them use
+  [perfetto.dev](perfetto.dev).

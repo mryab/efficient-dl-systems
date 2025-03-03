@@ -1,0 +1,9 @@
+{
+    "build": { "dockerfile": "Dockerfile" },
+    "name": "hw_fsdp",
+    "containerUser": "vscode",
+    "runArgs": [
+        "--name", "hw_fsdp",
+        "--restart", "unless-stopped"
+    ]
+  }
