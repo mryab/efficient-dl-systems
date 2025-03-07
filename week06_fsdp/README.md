@@ -17,6 +17,7 @@ hwFSDP).
 - Attach a memory snapshot of a hwFSDP run for validation.
 - Make sure the memory usage is similar to the one of FSDP2 (attach a memory
 snapshot of a FSDP2 run as well).
+- Sharded params must me instances of `DTensor` with correct mesh and placements.
 
 No computation / communication overlap is required in this part of the
 assignment.
@@ -37,7 +38,7 @@ assignment.
 
 ## Bonus
 
-### Activation Checkpointing support (1 point)
+### Activation checkpointing support (1 point)
 
 - Make changes to hwFSDP to support using activation checkpointing with hwFSDP.
 - Validate losses, grad norms and memory, if you've achieved overlap make sure
@@ -58,5 +59,6 @@ assignment.
 - Debug configs launch hwFSDP and FSDP2 runs of the `train.py` script.
 - `train.py` runs a debug Llama pre-train, logs metrics, saves profiling traces
   and memory snapshots.
-- Overlap can be checked using profiling traces. To view them use
+- Overlap can be checked using profiling traces. To visualize them use
   [perfetto.dev](perfetto.dev).
+- Memory snapshots can be visualized using [pytorch.org/memory_viz](pytorch.org/memory_viz).
