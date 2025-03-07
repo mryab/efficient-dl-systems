@@ -1,5 +1,4 @@
 *.txt
-hw-fsdp
-fsdp-2
+train
 1b.patch
 torchtitan
