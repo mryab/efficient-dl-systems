@@ -1,0 +1,25 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "name": "hw_fsdp",
+    "containerUser": "vscode",
+    "runArgs": [
+        "--name", "hw_fsdp_${localEnv:USER}",
+        "--restart", "unless-stopped",
+        "--gpus", "all",
+        "--ipc", "host",
+        "--ulimit", "memlock=-1",
+        "--ulimit", "stack=67108864"
+    ],
+    "postCreateCommand": {
+        "packages-editable-mode-compat": "./setup.sh"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ]
+        }
+    }
+}

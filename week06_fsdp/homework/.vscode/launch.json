@@ -1,0 +1,112 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "train.py — FSDP2",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OMP_NUM_THREADS": "1",
+                "CUDA_VISIBLE_DEVICES": "0,1"
+            },
+            "args": [
+                "--master-port", "29600",
+                "--nproc-per-node", "2",
+                "--local-ranks-filter", "0",
+
+                "./train.py",
+                "--flavor", "debugmodel",
+                "--batch-size", "2",
+                "--seq-len", "1024",
+                "--training-steps", "20",
+                "--warmup-steps", "5",
+                "--gc-freq", "5",
+                "--profile-freq", "10",
+
+                "--param-dtype", "float16",
+                "--reduce-dtype", "float32",
+
+                "--dump-folder", "./train/fsdp-2"
+            ]
+        },
+        {
+            "name": "train.py — hwFSDP",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OMP_NUM_THREADS": "1",
+                "CUDA_VISIBLE_DEVICES": "0,1"
+            },
+            "args": [
+                "--master-port", "29601",
+                "--nproc-per-node", "2",
+                "--local-ranks-filter", "0",
+
+                "./train.py",
+                "--flavor", "debugmodel",
+                "--batch-size", "2",
+                "--seq-len", "1024",
+                "--training-steps", "20",
+                "--warmup-steps", "5",
+                "--gc-freq", "5",
+                "--profile-freq", "10",
+
+                "--param-dtype", "float16",
+                "--reduce-dtype", "float32",
+
+                "--hw-fsdp",
+                "--dump-folder", "./train/hw-fsdp"
+            ]
+        },
+        {
+            "name": "test.py – FSDP2",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                    "OMP_NUM_THREADS": "1",
+                    "CUDA_VISIBLE_DEVICES": "6,7",
+                    // "CUDA_LAUNCH_BLOCKING": "1",
+            },
+            "args": [
+                "--master-port", "29600",
+                "--nproc-per-node", "2",
+                "--local-ranks-filter", "0",
+
+                "./test.py",
+                "--framework", "fsdp-2",
+                "--dump-dir", "./test/fsdp-2"
+            ]
+        },
+        {
+            "name": "test.py – hwFSDP",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                    "OMP_NUM_THREADS": "1",
+                    "CUDA_VISIBLE_DEVICES": "6,7",
+                    // "CUDA_LAUNCH_BLOCKING": "1",
+            },
+            "args": [
+                "--master-port", "29601",
+                "--nproc-per-node", "2",
+                "--local-ranks-filter", "0",
+
+                "./test.py",
+                "--framework", "hw-fsdp",
+                "--dump-dir", "./test/hw-fsdp",
+            ]
+        },
+    ]
+}
