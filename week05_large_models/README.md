@@ -1,4 +1,4 @@
-# Large Models
+# Week 5: Large Models
 * Lecture: [slides](lecture.pdf), [source](lecture.odp), [video](https://disk.yandex.ru/i/zpUT2zZorGilMw)
 * Practice: [video](https://disk.yandex.ru/i/Bxp_jXdGa011Xw)
 * Homework: see below
@@ -32,18 +32,6 @@ For YSDA and HSE students, you can use either DataSphere or one of the GPU serve
 
 
 During the in-class practice, we also had several PyTorch code examples that could come in handy when training large models:
-
-__Automatic tensor parallelism:__
-```python
-%pip install tensor_parallel
-import tensor_parallel as tp
-
-model = create_a_regular_pytorch_model()
-model = tp.tensor_parallel(model, ['cuda:0', 'cuda:1'])
-outputs_as_usual = model(input_as_usual)
-```
-
-Note: [tensor_parallel](https://github.com/BlackSamorez/tensor_parallel) is one of the simplest ways to do this kind of distributed training, but not the fastest one. If you want to squeeze every last bit of performance, use [DeepSpeed](https://github.com/microsoft/DeepSpeed) or similar specialized frameworks (see `./homework_b.md`)
 
 __Gradient checkpointing:__
 ```python
