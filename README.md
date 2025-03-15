@@ -25,7 +25,9 @@ __This branch corresponds to the ongoing 2025 course. If you want to see full ma
 - [__Week 7:__](./week07_application_deployment) __Python web application deployment__
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker, Prometheus, API via HTTP and gRPC.
 - __Week 8:__ __LLM inference optimizations and software__
-- __Week 9:__ __Efficient model inference__
+- [__Week 9:__](./week09_inference_algorithms) __Efficient model inference__
+  - Lecture: Speculative decoding, architecture optimizations, quantization, knowledge distillation
+  - Seminar: Introduction to speculative decoding. Matrix multiplication in Triton for different scenarios.
 - __Week 10:__ Guest lecture
 
 ## Grading
