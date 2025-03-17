@@ -24,7 +24,9 @@ __This branch corresponds to the ongoing 2025 course. If you want to see full ma
   - Seminar: In-depth overview of FSDP2
 - [__Week 7:__](./week07_application_deployment) __Python web application deployment__
   - Lecture/Seminar: Building and deployment of production-ready web services. App & web servers, Docker, Prometheus, API via HTTP and gRPC.
-- __Week 8:__ __LLM inference optimizations and software__
+- [__Week 8:__](./week08_inference_software) __LLM inference optimizations and software__
+  - Lecture: Inference speed metrics. KV caching, batch inference, continuous batching. FlashAttention with its modifications and PagedAttention. Overview of popular LLM serving frameworks.
+  - Seminar: Implementation of KV caching. Basics of the Triton language. Layer fusion in PyTorch and Triton. Liger Kernels. FlashAttention and FlexAttention in practice.
 - [__Week 9:__](./week09_inference_algorithms) __Efficient model inference__
   - Lecture: Speculative decoding, architecture optimizations, quantization, knowledge distillation
   - Seminar: Introduction to speculative decoding. Matrix multiplication in Triton for different scenarios.
