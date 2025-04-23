@@ -3,6 +3,7 @@
 * Lecture: [link](./lecture.pdf)
 * Seminar: [link](./practice.ipynb)
 * Homework: see the [homework](./homework) folder
+* Video: [lecture](https://disk.yandex.ru/i/44cBFo8zKSUYjg) [seminar](https://disk.yandex.ru/i/uxzBjkKYtGFLXA)
 
 ## Further reading
 * [Python multiprocessing docs](https://docs.python.org/3/library/multiprocessing.html) (pay attention to `fork` vs `spawn`!)
