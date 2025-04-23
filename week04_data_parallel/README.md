@@ -3,6 +3,7 @@
 * Lecture: [link](./lecture.pdf)
 * Seminar: [link](./practice.ipynb)
 * Homework: see the [homework](./homework) folder
+* Video: [lecture](https://disk.yandex.ru/i/44cBFo8zKSUYjg), [seminar](https://disk.yandex.ru/i/uxzBjkKYtGFLXA)
 
 ## Further reading
 * [Numba parallel](https://numba.pydata.org/numba-doc/dev/user/parallel.html) - a way to develop threaded parallel code in python without GIL
