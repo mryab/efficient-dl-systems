@@ -1,7 +1,7 @@
 # Week 9: Efficient model inference
 
 * Lecture: [link](./lecture.pdf)
-* Seminar: [link](./practice.ipynb)
+* Seminar: [link](./seminar.ipynb)
 * Homework: see the [homework](./homework) folder
 
 ## Further reading
