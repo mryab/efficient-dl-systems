@@ -7,7 +7,9 @@ __This branch corresponds to the 2026 iteration of the course. If you want to se
 - [__Week 1:__](./week01_intro) __Introduction__
   - Lecture: Course overview and logistics. Core concepts of the GPU architecture and the CUDA API.
   - Seminar: CUDA operations in PyTorch. Introduction to benchmarking.
-- __Week 2:__ General training optimizations, profiling deep learning code
+- [__Week 2:__](./week02_fast_pipelines) General training optimizations, profiling deep learning code
+  - Lecture: Measuring performance of GPU-accelerated software. Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads.
+  - Seminar: Automatic Mixed Precision in PyTorch. Basics of profiling with py-spy, PyTorch Profiler, Memory Snapshot and Nsight Systems. Dynamic padding for sequence data and JPEG decoding benchmarks.
 - __Week 3:__ Data-parallel training and All-Reduce
 - __Week 4:__ Methods for training large models
 - __Week 5:__ Sharded data-parallel training, distributed training optimizations

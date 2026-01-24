@@ -1,0 +1,15 @@
+datasets==2.9.0
+imageio==2.36.0
+matplotlib==3.8.2
+nvidia-dali-cuda120==1.53.0
+opencv-python==4.7.0.72
+opencv-python-headless==4.7.0.72
+pandas==1.5.3
+py-spy==0.3.14
+scikit-image==0.26.0
+simplejpeg==1.9.0
+torch==2.3.0
+torchtext
+torchvision==0.18.0
+tqdm==4.64.1
+vit_pytorch==0.40.2

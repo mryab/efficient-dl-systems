@@ -1,0 +1,12 @@
+datasets==2.9.0
+einops==0.7.0
+gdown==4.7.3
+matplotlib==3.8.2
+pandas==1.5.3
+py-spy==0.3.14
+transformers==4.48.2
+torch==2.4.0
+torchtext
+torchvision==0.19.0
+tqdm==4.64.1
+vit_pytorch==0.40.2
