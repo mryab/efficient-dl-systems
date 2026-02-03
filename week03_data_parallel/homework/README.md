@@ -1,4 +1,4 @@
-# Week 4 home assignment
+# Week 3 home assignment
 
 The assignment for this week consists of four parts: the first three are obligatory, and the fourth is a bonus one.
 Include all the files with implemented functions/classes and the report for Tasks 2 and 4 in your submission.

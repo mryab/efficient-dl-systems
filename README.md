@@ -10,7 +10,9 @@ __This branch corresponds to the 2026 iteration of the course. If you want to se
 - [__Week 2:__](./week02_fast_pipelines) __General training optimizations, profiling deep learning code__
   - Lecture: Measuring performance of GPU-accelerated software. Mixed-precision training. Data storage and loading optimizations. Tools for profiling deep learning workloads.
   - Seminar: Automatic Mixed Precision in PyTorch. Basics of profiling with py-spy, PyTorch Profiler, Memory Snapshot and Nsight Systems. Dynamic padding for sequence data and JPEG decoding benchmarks.
-- __Week 3:__ Data-parallel training and All-Reduce
+- [__Week 3:__](./week03_data_parallel) __Data-parallel training and All-Reduce__
+  - Lecture: Introduction to distributed training. Data-parallel training of neural networks. All-Reduce and its efficient implementations.
+  - Seminar: Introduction to PyTorch Distributed. Data-parallel training primitives.
 - __Week 4:__ Methods for training large models
 - __Week 5:__ Sharded data-parallel training, distributed training optimizations
 - __Week 6:__ Deep learning performance from first principles

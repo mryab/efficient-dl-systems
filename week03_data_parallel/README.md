@@ -1,4 +1,4 @@
-# Week 4: Data-parallel training and All-Reduce
+# Week 3: Data-parallel training and All-Reduce
 
 * Lecture: [link](./lecture.pdf)
 * Seminar: [link](./practice.ipynb) + [DDP Demo](https://github.com/vorobyov01/llm-training-sandbox)
