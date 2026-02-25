@@ -88,7 +88,7 @@ assignment.
 - You will also need to download dataset and tokenizer files:
   ```bash
   mkdir -p c4_test && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/c4_test/data.json --output c4_test/data.json
-  mkdir -p c4_test \
+  mkdir -p tokenizer \
     && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/tokenizer/tokenizer.json --output tokenizer/tokenizer.json \
     && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/tokenizer/tokenizer_config.json --output tokenizer/tokenizer_config.json
   ```
