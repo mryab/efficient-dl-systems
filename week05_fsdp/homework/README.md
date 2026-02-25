@@ -85,6 +85,13 @@ assignment.
   `https://docs.astral.sh/uv/getting-started/installation`).
 - You can then activate the virtual env with `.venv/bin/activate` or use `uv run
   ...`.
+- You will also need to donwload dummy dataset and tokenizer files:
+  ```bash
+  mkdir -p c4_test && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/c4_test/data.json --output c4_test/data.json
+  mkdir -p c4_test \
+    && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/tokenizer/tokenizer.json --output tokenizer/tokenizer.json \
+    && curl https://raw.githubusercontent.com/pytorch/torchtitan/refs/heads/main/tests/assets/tokenizer/tokenizer_config.json --output tokenizer/tokenizer_config.json
+  ```
 
 ### Debugging
 
