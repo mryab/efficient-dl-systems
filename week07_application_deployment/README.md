@@ -3,6 +3,7 @@
 Thanks Alex Kosmos for lecture and seminar materials ❤️❤️❤️️
 
 * See README files inside numbered directories for more info about how to run stands.
+* Lecture slides: [here](./Effdl26-07.pdf)
 * Homework: [here](https://github.com/newokaerinasai/effdl26-week07-homework)
 
 Run `train_model.py` to generate `vgg16.pt`. 
