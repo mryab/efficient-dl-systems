@@ -1,0 +1,25 @@
+[project]
+name = "efficient-dl-week06"
+version = "0.1.0"
+description = "Week 6 homework: Optimizing Transformer Training"
+requires-python = ">=3.10"
+dependencies = [
+    "packaging==26.0",
+    "torch==2.8.0",
+    "liger-kernel==0.7.0",
+    "numpy==2.4.2",
+    "psutil==7.2.2",
+    "pytest==9.0.2",
+]
+
+[tool.setuptools.packages.find]
+include = ["model*", "efficient_model*", "optimizer*", "efficient_optimizer*", "calculators*"]
+
+[project.optional-dependencies]
+flash = [
+    "flash-attn==2.8.3",
+]
+
+[tool.uv]
+# flash-attn requires torch to be installed first and needs --no-build-isolation
+no-build-isolation-package = ["flash-attn"]

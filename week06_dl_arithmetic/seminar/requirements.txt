@@ -1,0 +1,6 @@
+torch>=2.0
+triton
+liger-kernel
+transformers
+matplotlib
+pandas
