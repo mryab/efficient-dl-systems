@@ -20,7 +20,8 @@ __This branch corresponds to the 2026 iteration of the course. If you want to se
   - Lecture: FSDP training and its optimizations
   - Seminar: In-depth overview of PyTorch Device Mesh, DTensor, FSDP2, and Distributed Checkpoint
 - __Week 6:__ Deep learning performance from first principles
-- __Week 7:__ Basics of web service deployment
+- [__Week 7:__](./week07_application_deployment) __Basics of web service deployment.__
+  - Lecture/Seminar: Web service deployment and production-ready systems basics.
 - __Week 8:__ Systems optimizations for inference
 - __Week 9:__ Algorithmic optimizations for inference
 - __Week 10:__ Guest lecture

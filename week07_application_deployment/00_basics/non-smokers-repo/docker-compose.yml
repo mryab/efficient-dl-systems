@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.good
+    container_name: non_smoker_app
+    ports:
+      - "8080:8080"
+    environment:
+      MODEL_STARTUP_DELAY_SECONDS: "2.0"
+      RANDOM_SEED: "7"
+      REDIS_URL: "redis://redis:6379/0"
+    depends_on:
+      - redis
+    networks:
+      - seminar_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: non_smoker_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - seminar_net
+
+networks:
+  seminar_net:
+    driver: bridge

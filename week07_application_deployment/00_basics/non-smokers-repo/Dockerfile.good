@@ -1,0 +1,17 @@
+# Docker image is semi-pinned: tag is better than nothing but worse than SHA256 pin
+FROM python:3.13-slim-bookworm
+
+WORKDIR /app
+
+# UV version is pinned - this is a good practice
+COPY --from=ghcr.io/astral-sh/uv:0.10.4 /uv /uvx /bin/
+
+# Cache-friendly: dependency metadata copied before application code.
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev
+
+COPY app ./app
+
+EXPOSE 8080
+
+CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]

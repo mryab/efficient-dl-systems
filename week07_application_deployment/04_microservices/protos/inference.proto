@@ -1,0 +1,15 @@
+syntax = "proto3";
+package inference;
+
+service ImageClassifier {
+  rpc Predict(ImageClassifierInput) returns (ImageClassifierOutput);
+}
+
+message ImageClassifierInput {
+  repeated int32 shape = 2;
+  repeated double data = 1;
+}
+
+message ImageClassifierOutput {
+  string label = 1;
+}
