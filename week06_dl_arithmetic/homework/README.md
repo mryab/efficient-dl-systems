@@ -54,10 +54,10 @@ Recall from lecture: fusing the linear projection with cross entropy avoids mate
 
 Replace vanilla attention with optimized implementation:
 - Fused QKV projection (single matmul instead of three) **(0.25 points, mandatory)**
-- Fused RoPE using [`apply_rotary_emb`](https://github.com/Dao-AILab/flash-attention/blob/main/flash_attn/layers/rotary.py) from Flash Attention library **(Bonus)**
-- [Flash Attention 2](https://github.com/Dao-AILab/flash-attention) for efficient attention computation **(Bonus)**
+- Fused RoPE using [`apply_rotary_emb`](https://github.com/Dao-AILab/flash-attention/blob/main/flash_attn/layers/rotary.py) from Flash Attention library **(0.25 points, optional)**
+- [Flash Attention 2](https://github.com/Dao-AILab/flash-attention) for efficient attention computation **(0.5 points, optional)**
 
-**Note:** Flash Attention is not required to pass e2e tests.
+**Note:** Flash Attention and fused rotary are not required to pass e2e tests. Fused QKV is required.
 
 **Test (optional):** `pytest tests/test_attention.py`
 
