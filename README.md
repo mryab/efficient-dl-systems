@@ -27,7 +27,9 @@ __This branch corresponds to the 2026 iteration of the course. If you want to se
 - [__Week 8:__](./week08_inference_software) __Systems optimizations for inference__
   - Lecture: Inference speed metrics. KV caching, batch inference, continuous batching. FlashAttention with its modifications and PagedAttention. Overview of popular LLM serving frameworks.
   - Seminar: KV cache utilization, continuous batching for high-throughput serving, and performance measurements of the prefill and decode stages.
-- __Week 9:__ Algorithmic optimizations for inference
+- [__Week 9:__](./week09_inference_algorithms) __Algorithmic optimizations for inference.__
+  - Lecture: LLM inference use cases and metrics. Architecture optimizations, quantization, speculative decoding, KV cache compression, knowledge distillation.
+  - Seminar: Proof of distribution preservation in speculative decoding. Matrix multiplication in Triton for different scenarios. Using `nsys profile`.
 - __Week 10:__ Guest lecture
 
 ## Grading
