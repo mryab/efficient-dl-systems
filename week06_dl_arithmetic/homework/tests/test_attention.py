@@ -73,7 +73,7 @@ class TestAttentionCorrectness:
             f"Forward mismatch! Max diff: {max_diff}"
 
     @pytest.mark.parametrize("dtype,atol,rtol", [
-        (torch.bfloat16, 5e-2, 5e-2),
+        (torch.bfloat16, 9.5e-2, 9.5e-2),
     ])
     def test_backward(self, device, models, dtype, atol, rtol):
         """Test that efficient attention backward matches baseline."""

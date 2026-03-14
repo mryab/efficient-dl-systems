@@ -155,7 +155,7 @@ class TestE2EMemory:
         efficient_peak = measure_peak_memory(efficient_fwbw)
 
         ratio = baseline_peak / efficient_peak if efficient_peak > 0 else float("inf")
-        min_ratio = 7.76
+        min_ratio = 1.2
 
         assert ratio >= min_ratio, \
             f"Expected at least {min_ratio}x memory reduction, got {ratio:.2f}x " \

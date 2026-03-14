@@ -61,10 +61,11 @@ class RotaryPositionalEmbedding(nn.Module):
     
     def _apply_rotary(self, x: torch.Tensor, cos: torch.Tensor, sin: torch.Tensor) -> torch.Tensor:
         """Apply rotary embedding to tensor x."""
+        orig_dtype = x.dtype
         x1 = x[..., : x.shape[-1] // 2]
         x2 = x[..., x.shape[-1] // 2 :]
         rotated = torch.cat([-x2, x1], dim=-1)
-        return x * cos + rotated * sin
+        return (x.float() * cos.float() + rotated.float() * sin.float()).to(orig_dtype)
 
 
 class MultiHeadAttention(nn.Module):

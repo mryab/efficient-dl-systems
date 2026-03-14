@@ -8,8 +8,14 @@ You are given a **transformer training script** that works correctly but uses no
 
 ### Installation
 
+With Flash Attention (for bonus tasks):
 ```bash
 uv pip install -e ".[flash]"
+```
+
+Without Flash Attention:
+```bash
+uv pip install -e .
 ```
 
 ### Project Structure
@@ -47,11 +53,13 @@ Recall from lecture: fusing the linear projection with cross entropy avoids mate
 ### 1.2 Efficient Attention (1 point)
 
 Replace vanilla attention with optimized implementation:
-- [Flash Attention 2](https://github.com/Dao-AILab/flash-attention) for efficient attention computation
-- Fused QKV projection (single matmul instead of three)
-- Fused RoPE using [`apply_rotary_emb`](https://github.com/Dao-AILab/flash-attention/blob/main/flash_attn/layers/rotary.py) from Flash Attention library 
+- Fused QKV projection (single matmul instead of three) **(0.25 points, mandatory)**
+- Fused RoPE using [`apply_rotary_emb`](https://github.com/Dao-AILab/flash-attention/blob/main/flash_attn/layers/rotary.py) from Flash Attention library **(0.25 points, optional)**
+- [Flash Attention 2](https://github.com/Dao-AILab/flash-attention) for efficient attention computation **(0.5 points, optional)**
 
-**Test:** `pytest tests/test_attention.py`
+**Note:** Flash Attention and fused rotary are not required to pass e2e tests. Fused QKV is required.
+
+**Test (optional):** `pytest tests/test_attention.py`
 
 ### 1.3 Fused & Memory-Efficient Zero-Centered RMSNorm (1.5 points)
 
@@ -95,7 +103,7 @@ If you're new to Triton, start with the [Triton Language Guide](https://triton-l
 
 After completing all 4 model optimizations, run `pytest tests/test_e2e.py` to verify correctness and memory reduction.
 
-**Hint:** There's a hidden memory inefficiency near the attention in baseline - your memory results won't match targets without finding it.
+**Hint:** There's a hidden memory inefficiency near the attention in baseline - your memory results may not match targets without finding it.
 
 ## Part 2: Training Optimizations (4.5 points)
 
