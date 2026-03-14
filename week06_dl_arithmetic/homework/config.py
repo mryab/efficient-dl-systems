@@ -3,11 +3,11 @@ from dataclasses import dataclass
 
 @dataclass
 class TransformerConfig:
-    vocab_size: int = 32000
-    hidden_dim: int = 2048
-    num_heads: int = 32
-    num_layers: int = 24
-    intermediate_dim: int = 5120
+    vocab_size: int = 16000
+    hidden_dim: int = 512
+    num_heads: int = 8
+    num_layers: int = 6
+    intermediate_dim: int = 1024
     max_seq_len: int = 4096
     dropout: float = 0.0
     rope_theta: float = 10000.0
