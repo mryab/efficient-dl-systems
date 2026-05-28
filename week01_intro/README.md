@@ -18,3 +18,4 @@
 * [On threading in PyTorch](https://github.com/pytorch/pytorch/issues/19001)
 * [Getting started with CUDA Graphs](https://developer.nvidia.com/blog/cuda-graphs/)
 * [Accelerating PyTorch with CUDA Graphs](https://github.com/pytorch.org/blog/accelerating-pytorch-with-cuda-graphs/)
+* https://pytorch.org/blog/why-is-pytorch-compile-so-fast-kernel-fusion/
